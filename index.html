@@ -1,1 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <title>Digital Store - eBooks</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #f5f7fb;
+      color: #172033;
+    }
+
+    header {
+      background: #111827;
+      color: white;
+      padding: 18px 7%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 10;
+    }
+
+    .logo {
+      font-size: 25px;
+      font-weight: bold;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 20px;
+      font-size: 15px;
+    }
+
+    .hero {
+      padding: 75px 7%;
+      text-align: center;
+      background: linear-gradient(135deg, #111827, #2563eb);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      margin-bottom: 15px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 25px;
+    }
+
+    .hero button {
+      background: white;
+      color: #111827;
+      border: none;
+      padding: 13px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .section {
+      padding: 55px 7%;
+    }
+
+    .section h2 {
+      text-align: center;
+      margin-bottom: 35px;
+      font-size: 30px;
+    }
+
+    .books {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 25px;
+    }
+
+    .book {
+      background: white;
+      border-radius: 15px;
+      padding: 25px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .book-cover {
+      height: 220px;
+      background: linear-gradient(135deg, #2563eb, #7c3aed);
+      border-radius: 10px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 25px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .book h3 {
+      margin-bottom: 10px;
+    }
+
+    .book p {
+      color: #667085;
+      margin-bottom: 12px;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 15px;
+    }
+
+    .buy {
+      display: inline-block;
+      background: #2563eb;
+      color: white;
+      text-decoration: none;
+      padding: 11px 25px;
+      border-radius: 7px;
+    }
+
+    .about {
+      background: white;
+      text-align: center;
+      border-radius: 15px;
+      padding: 35px;
+      max-width: 850px;
+      margin: auto;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    footer {
+      background: #111827;
+      color: white;
+      text-align: center;
+      padding: 25px;
+      margin-top: 30px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 32px;
+      }
+
+      nav a {
+        margin-left: 8px;
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">DIGITAL STORE</div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#books">eBooks</a>
+    <a href="#about">About</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</header>
+
+<section class="hero" id="home">
+  <h1>Welcome to Digital Store</h1>
+
+  <p>
+    Learn more. Read more. Grow more.
+  </p>
+
+  <button onclick="document.getElementById('books').scrollIntoView()">
+    Explore eBooks
+  </button>
+</section>
+
+<section class="section" id="books">
+
+  <h2>Our eBooks</h2>
+
+  <div class="books">
+
+    <div class="book">
+
+      <div class="book-cover">
+        AI TOOLS
+      </div>
+
+      <h3>AI Tools for Beginners</h3>
+
+      <p>
+        Learn useful AI tools in simple language.
+      </p>
+
+      <div class="price">₹99</div>
+
+      <a href="#" class="buy">
+        Buy Now
+      </a>
+
+    </div>
+
+
+    <div class="book">
+
+      <div class="book-cover">
+        COMPUTER
+      </div>
+
+      <h3>Computer Basics</h3>
+
+      <p>
+        Learn computer basics step by step.
+      </p>
+
+      <div class="price">₹79</div>
+
+      <a href="#" class="buy">
+        Buy Now
+      </a>
+
+    </div>
+
+
+    <div class="book">
+
+      <div class="book-cover">
+        ENGLISH
+      </div>
+
+      <h3>Spoken English</h3>
+
+      <p>
+        Improve your English with easy lessons.
+      </p>
+
+      <div class="price">₹99</div>
+
+      <a href="#" class="buy">
+        Buy Now
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<section class="section" id="about">
+
+  <h2>About Us</h2>
+
+  <div class="about">
+
+    <p>
+      Digital Store is an online platform for
+      useful eBooks and digital learning materials.
+      Our goal is to make learning simple and affordable.
+    </p>
+
+  </div>
+
+</section>
+
+
+<section class="section" id="contact">
+
+  <h2>Contact</h2>
+
+  <div class="about">
+
+    <p>
+      Email: your@email.com
+    </p>
+
+  </div>
+
+</section>
+
+
+<footer>
+
+  <p>
+    © 2026 Digital Store. All Rights Reserved.
+  </p>
+
+</footer>
+
+</body>
+</html>
