@@ -2,19 +2,34 @@
 <html lang="hi">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <!-- Google Search Console Verification -->
     <meta name="google-site-verification" content="9l-6toET2V0MBsjPtMFxvaHQtagYRy1emV5KMFTqzb0">
 
-    <title>Digital Store - eBooks & Digital Learning</title>
+    <!-- SEO -->
+    <title>DigitalReads - Hindi eBooks, AI & Digital Learning</title>
 
-    <meta name="description" content="Digital Store पर आसान भाषा में eBooks पढ़ें और डिजिटल ज्ञान सीखें। AI, Computer और English की उपयोगी eBooks उपलब्ध हैं।">
+    <meta name="description" content="DigitalReads पर Hindi और आसान भाषा में AI, Computer, Spoken English और Digital Learning की उपयोगी eBooks पढ़ें और खरीदें।">
+
+    <meta name="keywords" content="DigitalReads, Hindi eBooks, Hindi books, AI eBook, AI Tools for Beginners, Computer eBook, Spoken English eBook, digital books, online ebooks">
+
+    <meta name="robots" content="index, follow">
+
+    <link rel="canonical" href="https://karanppt8271-code.github.io/DigitalReads/">
+
+    <!-- Social SEO -->
+    <meta property="og:title" content="DigitalReads - Hindi eBooks & Digital Learning">
+    <meta property="og:description" content="AI, Computer, Spoken English और Digital Learning की आसान eBooks।">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://karanppt8271-code.github.io/DigitalReads/">
 
     <style>
         * {
-            box-sizing: border-box;
             margin: 0;
             padding: 0;
+            box-sizing: border-box;
             scroll-behavior: smooth;
         }
 
@@ -32,10 +47,13 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
         }
 
         .logo {
-            font-size: 26px;
+            font-size: 27px;
             font-weight: bold;
             color: #f0b52b;
         }
@@ -52,25 +70,34 @@
         }
 
         .hero {
-            min-height: 70vh;
+            min-height: 72vh;
             display: flex;
             justify-content: center;
             align-items: center;
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             background: linear-gradient(135deg, #29150d, #5a321d);
             color: white;
         }
 
+        .hero-content {
+            max-width: 850px;
+        }
+
         .hero h1 {
-            font-size: 48px;
+            font-size: 52px;
             color: #f0b52b;
             margin-bottom: 15px;
         }
 
+        .hero h2 {
+            font-size: 25px;
+            margin-bottom: 15px;
+        }
+
         .hero p {
-            font-size: 20px;
-            margin-bottom: 25px;
+            font-size: 19px;
+            margin-bottom: 28px;
         }
 
         .btn {
@@ -81,16 +108,30 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background: white;
         }
 
         section {
-            padding: 60px 7%;
+            padding: 65px 7%;
         }
 
         .section-title {
             text-align: center;
-            font-size: 34px;
+            font-size: 36px;
             margin-bottom: 35px;
+            color: #29150d;
+        }
+
+        .intro {
+            text-align: center;
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
         }
 
         .books {
@@ -102,19 +143,24 @@
         .book {
             background: white;
             padding: 28px;
-            border-radius: 15px;
+            border-radius: 16px;
             text-align: center;
             border: 2px solid #f0b52b;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.08);
+            box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+            transition: 0.3s;
+        }
+
+        .book:hover {
+            transform: translateY(-7px);
         }
 
         .book-icon {
-            font-size: 50px;
+            font-size: 55px;
             margin-bottom: 15px;
         }
 
         .book h3 {
-            font-size: 22px;
+            font-size: 23px;
             margin-bottom: 10px;
         }
 
@@ -124,7 +170,7 @@
         }
 
         .price {
-            font-size: 24px;
+            font-size: 25px;
             font-weight: bold;
             color: #9b6500;
             margin-bottom: 18px;
@@ -136,7 +182,18 @@
         }
 
         .about p {
-            max-width: 800px;
+            max-width: 850px;
+            margin: auto;
+            font-size: 18px;
+        }
+
+        .seo-info {
+            background: white;
+            text-align: center;
+        }
+
+        .seo-info p {
+            max-width: 850px;
             margin: auto;
             font-size: 18px;
         }
@@ -166,9 +223,14 @@
         }
 
         @media (max-width: 700px) {
+
             header {
                 flex-direction: column;
                 gap: 12px;
+            }
+
+            nav {
+                text-align: center;
             }
 
             nav a {
@@ -177,7 +239,15 @@
             }
 
             .hero h1 {
-                font-size: 36px;
+                font-size: 37px;
+            }
+
+            .hero h2 {
+                font-size: 21px;
+            }
+
+            .hero p {
+                font-size: 17px;
             }
         }
     </style>
@@ -185,8 +255,12 @@
 
 <body>
 
+<!-- HEADER -->
 <header>
-    <div class="logo">DIGITAL STORE</div>
+
+    <div class="logo">
+        DIGITALREADS
+    </div>
 
     <nav>
         <a href="#home">Home</a>
@@ -194,94 +268,167 @@
         <a href="#about">About</a>
         <a href="#contact">Contact</a>
     </nav>
+
 </header>
 
+
+<!-- HERO -->
 <section class="hero" id="home">
-    <div>
-        <h1>Welcome to Digital Store</h1>
+
+    <div class="hero-content">
+
+        <h1>DigitalReads</h1>
+
+        <h2>Hindi eBooks & Digital Learning</h2>
 
         <p>
-            Learn more. Read more. Grow more.
-        </p>
-
-        <p>
-            आसान भाषा में Digital eBooks और Learning सामग्री।
+            आसान भाषा में AI, Computer, English और Digital Learning सीखें।
         </p>
 
         <a href="#ebooks" class="btn">
             Explore eBooks
         </a>
+
     </div>
+
 </section>
 
+
+<!-- INTRO -->
+<section>
+
+    <h2 class="section-title">
+        Welcome to DigitalReads
+    </h2>
+
+    <p class="intro">
+        DigitalReads एक online digital learning platform है,
+        जहाँ आपको आसान भाषा में उपयोगी eBooks और learning सामग्री मिलती है।
+        हमारा उद्देश्य digital knowledge को सरल और सभी के लिए उपयोगी बनाना है।
+    </p>
+
+</section>
+
+
+<!-- EBOOKS -->
 <section id="ebooks">
 
     <h2 class="section-title">
-        Our eBooks
+        Popular eBooks
     </h2>
 
     <div class="books">
 
+        <!-- BOOK 1 -->
         <div class="book">
+
             <div class="book-icon">🤖</div>
 
-            <h3>AI Tools for Beginners</h3>
+            <h3>
+                AI Tools for Beginners
+            </h3>
 
             <p>
                 AI को आसान भाषा में सीखें और इस्तेमाल करें।
+                Beginners के लिए सरल guide।
             </p>
 
-            <div class="price">₹99</div>
+            <div class="price">
+                ₹99
+            </div>
 
-            <a href="#" class="btn">Buy Now</a>
+            <a href="#" class="btn">
+                Buy Now
+            </a>
+
         </div>
 
+
+        <!-- BOOK 2 -->
         <div class="book">
+
             <div class="book-icon">💻</div>
 
-            <h3>Computer Basics</h3>
+            <h3>
+                Computer Basics
+            </h3>
 
             <p>
-                Computer सीखने वालों के लिए आसान guide।
+                Computer सीखने वालों के लिए आसान और practical guide।
             </p>
 
-            <div class="price">₹79</div>
+            <div class="price">
+                ₹79
+            </div>
 
-            <a href="#" class="btn">Buy Now</a>
+            <a href="#" class="btn">
+                Buy Now
+            </a>
+
         </div>
 
+
+        <!-- BOOK 3 -->
         <div class="book">
+
             <div class="book-icon">📖</div>
 
-            <h3>Spoken English</h3>
+            <h3>
+                Spoken English
+            </h3>
 
             <p>
                 रोज़मर्रा की English बोलना आसान तरीके से सीखें।
             </p>
 
-            <div class="price">₹99</div>
+            <div class="price">
+                ₹99
+            </div>
 
-            <a href="#" class="btn">Buy Now</a>
+            <a href="#" class="btn">
+                Buy Now
+            </a>
+
         </div>
 
     </div>
 
 </section>
 
+
+<!-- ABOUT -->
 <section class="about" id="about">
 
     <h2 class="section-title">
-        About Digital Store
+        About DigitalReads
     </h2>
 
     <p>
-        Digital Store एक online platform है जहाँ आप
-        आसान भाषा में उपयोगी digital eBooks पढ़ और खरीद सकते हैं।
-        हमारा उद्देश्य learning को सरल और सभी के लिए accessible बनाना है।
+        DigitalReads पर हम beginners और learners के लिए
+        आसान भाषा में digital education और eBooks उपलब्ध कराने का प्रयास करते हैं।
+        यहाँ AI, Computer, English और अन्य digital learning topics पर सामग्री मिलेगी।
     </p>
 
 </section>
 
+
+<!-- SEO CONTENT -->
+<section class="seo-info">
+
+    <h2 class="section-title">
+        Learn with DigitalReads
+    </h2>
+
+    <p>
+        Hindi eBooks, AI tools, artificial intelligence,
+        computer basics, spoken English और online digital learning
+        के बारे में आसान और उपयोगी जानकारी DigitalReads पर प्राप्त करें।
+    </p>
+
+</section>
+
+
+<!-- CONTACT -->
 <section class="contact" id="contact">
 
     <h2 class="section-title">
@@ -291,7 +438,7 @@
     <div class="contact-box">
 
         <p>
-            किसी भी जानकारी के लिए हमसे संपर्क करें।
+            eBooks या DigitalReads के बारे में जानकारी के लिए संपर्क करें।
         </p>
 
         <br>
@@ -304,10 +451,12 @@
 
 </section>
 
+
+<!-- FOOTER -->
 <footer>
 
     <p>
-        © 2026 <span>Digital Store</span> |
+        © 2026 <span>DigitalReads</span> |
         All Rights Reserved
     </p>
 
