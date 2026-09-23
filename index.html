@@ -4,20 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- Google Search Console Verification -->
-    <meta name="google-site-verification" content="9l-6toET2V0MBsjPtMFxvaHQtagYRy1emV5KMFTqzb0" />
+    <meta name="google-site-verification" content="9l-6toET2V0MBsjPtMFxvaHQtagYRy1emV5KMFTqzb0">
 
     <title>Digital Store - eBooks & Digital Learning</title>
 
     <meta name="description" content="Digital Store पर आसान भाषा में eBooks पढ़ें और डिजिटल ज्ञान सीखें। AI, Computer और English की उपयोगी eBooks उपलब्ध हैं।">
 
-    <meta name="keywords" content="Digital Store, eBooks, Hindi eBook, AI Tools, Computer Basics, Spoken English, डिजिटल किताबें">
-
     <style>
         * {
+            box-sizing: border-box;
             margin: 0;
             padding: 0;
-            box-sizing: border-box;
             scroll-behavior: smooth;
         }
 
@@ -35,9 +32,6 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
         }
 
         .logo {
@@ -58,7 +52,7 @@
         }
 
         .hero {
-            min-height: 75vh;
+            min-height: 70vh;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -68,19 +62,15 @@
             color: white;
         }
 
-        .hero-content {
-            max-width: 800px;
-        }
-
         .hero h1 {
-            font-size: 50px;
-            margin-bottom: 15px;
+            font-size: 48px;
             color: #f0b52b;
+            margin-bottom: 15px;
         }
 
         .hero p {
-            font-size: 21px;
-            margin-bottom: 30px;
+            font-size: 20px;
+            margin-bottom: 25px;
         }
 
         .btn {
@@ -91,23 +81,16 @@
             border-radius: 30px;
             text-decoration: none;
             font-weight: bold;
-            border: none;
-            cursor: pointer;
-        }
-
-        .btn:hover {
-            background: white;
         }
 
         section {
-            padding: 65px 7%;
+            padding: 60px 7%;
         }
 
         .section-title {
             text-align: center;
-            font-size: 35px;
+            font-size: 34px;
             margin-bottom: 35px;
-            color: #29150d;
         }
 
         .books {
@@ -123,20 +106,15 @@
             text-align: center;
             border: 2px solid #f0b52b;
             box-shadow: 0 5px 15px rgba(0,0,0,0.08);
-            transition: 0.3s;
-        }
-
-        .book:hover {
-            transform: translateY(-7px);
         }
 
         .book-icon {
-            font-size: 55px;
+            font-size: 50px;
             margin-bottom: 15px;
         }
 
         .book h3 {
-            font-size: 23px;
+            font-size: 22px;
             margin-bottom: 10px;
         }
 
@@ -201,185 +179,139 @@
             .hero h1 {
                 font-size: 36px;
             }
-
-            .hero p {
-                font-size: 18px;
-            }
         }
     </style>
 </head>
 
 <body>
 
-    <!-- Header -->
-    <header>
-        <div class="logo">DIGITAL STORE</div>
+<header>
+    <div class="logo">DIGITAL STORE</div>
 
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#ebooks">eBooks</a>
-            <a href="#about">About</a>
-            <a href="#contact">Contact</a>
-        </nav>
-    </header>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#ebooks">eBooks</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+    </nav>
+</header>
 
-
-    <!-- Hero -->
-    <section class="hero" id="home">
-        <div class="hero-content">
-
-            <h1>Welcome to Digital Store</h1>
-
-            <p>
-                Learn more. Read more. Grow more.
-            </p>
-
-            <p>
-                आसान भाषा में Digital eBooks और Learning सामग्री।
-            </p>
-
-            <a href="#ebooks" class="btn">
-                Explore eBooks
-            </a>
-
-        </div>
-    </section>
-
-
-    <!-- eBooks -->
-    <section id="ebooks">
-
-        <h2 class="section-title">
-            Our eBooks
-        </h2>
-
-        <div class="books">
-
-            <!-- Book 1 -->
-            <div class="book">
-
-                <div class="book-icon">🤖</div>
-
-                <h3>
-                    AI Tools for Beginners
-                </h3>
-
-                <p>
-                    AI को आसान भाषा में सीखें और इस्तेमाल करें।
-                </p>
-
-                <div class="price">
-                    ₹99
-                </div>
-
-                <a href="#" class="btn">
-                    Buy Now
-                </a>
-
-            </div>
-
-
-            <!-- Book 2 -->
-            <div class="book">
-
-                <div class="book-icon">💻</div>
-
-                <h3>
-                    Computer Basics
-                </h3>
-
-                <p>
-                    Computer सीखने वालों के लिए आसान guide।
-                </p>
-
-                <div class="price">
-                    ₹79
-                </div>
-
-                <a href="#" class="btn">
-                    Buy Now
-                </a>
-
-            </div>
-
-
-            <!-- Book 3 -->
-            <div class="book">
-
-                <div class="book-icon">📖</div>
-
-                <h3>
-                    Spoken English
-                </h3>
-
-                <p>
-                    रोज़मर्रा की English बोलना आसान तरीके से सीखें।
-                </p>
-
-                <div class="price">
-                    ₹99
-                </div>
-
-                <a href="#" class="btn">
-                    Buy Now
-                </a>
-
-            </div>
-
-        </div>
-
-    </section>
-
-
-    <!-- About -->
-    <section class="about" id="about">
-
-        <h2 class="section-title">
-            About Digital Store
-        </h2>
+<section class="hero" id="home">
+    <div>
+        <h1>Welcome to Digital Store</h1>
 
         <p>
-            Digital Store एक online platform है जहाँ आप
-            आसान भाषा में उपयोगी digital eBooks पढ़ और खरीद सकते हैं।
-            हमारा उद्देश्य learning को सरल और सभी के लिए accessible बनाना है।
+            Learn more. Read more. Grow more.
         </p>
-
-    </section>
-
-
-    <!-- Contact -->
-    <section class="contact" id="contact">
-
-        <h2 class="section-title">
-            Contact Us
-        </h2>
-
-        <div class="contact-box">
-
-            <p>
-                किसी भी जानकारी के लिए हमसे संपर्क करें।
-            </p>
-
-            <br>
-
-            <p>
-                📧 Email: your@email.com
-            </p>
-
-        </div>
-
-    </section>
-
-
-    <!-- Footer -->
-    <footer>
 
         <p>
-            © 2026 <span>Digital Store</span> |
-            All Rights Reserved
+            आसान भाषा में Digital eBooks और Learning सामग्री।
         </p>
 
-    </footer>
+        <a href="#ebooks" class="btn">
+            Explore eBooks
+        </a>
+    </div>
+</section>
+
+<section id="ebooks">
+
+    <h2 class="section-title">
+        Our eBooks
+    </h2>
+
+    <div class="books">
+
+        <div class="book">
+            <div class="book-icon">🤖</div>
+
+            <h3>AI Tools for Beginners</h3>
+
+            <p>
+                AI को आसान भाषा में सीखें और इस्तेमाल करें।
+            </p>
+
+            <div class="price">₹99</div>
+
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="book">
+            <div class="book-icon">💻</div>
+
+            <h3>Computer Basics</h3>
+
+            <p>
+                Computer सीखने वालों के लिए आसान guide।
+            </p>
+
+            <div class="price">₹79</div>
+
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+        <div class="book">
+            <div class="book-icon">📖</div>
+
+            <h3>Spoken English</h3>
+
+            <p>
+                रोज़मर्रा की English बोलना आसान तरीके से सीखें।
+            </p>
+
+            <div class="price">₹99</div>
+
+            <a href="#" class="btn">Buy Now</a>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="about" id="about">
+
+    <h2 class="section-title">
+        About Digital Store
+    </h2>
+
+    <p>
+        Digital Store एक online platform है जहाँ आप
+        आसान भाषा में उपयोगी digital eBooks पढ़ और खरीद सकते हैं।
+        हमारा उद्देश्य learning को सरल और सभी के लिए accessible बनाना है।
+    </p>
+
+</section>
+
+<section class="contact" id="contact">
+
+    <h2 class="section-title">
+        Contact Us
+    </h2>
+
+    <div class="contact-box">
+
+        <p>
+            किसी भी जानकारी के लिए हमसे संपर्क करें।
+        </p>
+
+        <br>
+
+        <p>
+            📧 Email: your@email.com
+        </p>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 <span>Digital Store</span> |
+        All Rights Reserved
+    </p>
+
+</footer>
 
 </body>
 </html>
