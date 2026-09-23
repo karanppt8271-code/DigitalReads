@@ -4,22 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<!-- Google Search Console -->
 <meta name="google-site-verification" content="9l-6toET2V0MBsjPtMFxvaHQtagYRy1emV5KMFTqzb0">
 
 <title>DigitalReads | Premium Hindi eBooks & Digital Learning</title>
 
 <meta name="description" content="DigitalReads पर AI, Computer, Spoken English और Digital Learning की आसान और उपयोगी eBooks पढ़ें और खरीदें।">
 
-<meta name="keywords" content="DigitalReads, Hindi eBooks, AI eBook, Computer eBook, Spoken English, Digital Learning, online books">
+<meta name="keywords" content="DigitalReads, Hindi eBooks, AI eBook, Computer eBook, Spoken English, Digital Learning">
 
 <meta name="robots" content="index, follow">
 
 <link rel="canonical" href="https://karanppt8271-code.github.io/DigitalReads/">
 
-<!-- Social SEO -->
 <meta property="og:title" content="DigitalReads | Premium Hindi eBooks">
-<meta property="og:description" content="Learn smarter with simple and useful digital books.">
+<meta property="og:description" content="AI, Computer, Spoken English और Digital Learning की useful eBooks।">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://karanppt8271-code.github.io/DigitalReads/">
 
@@ -29,7 +27,7 @@
     margin:0;
     padding:0;
     box-sizing:border-box;
-    font-family:Arial, Helvetica, sans-serif;
+    font-family:Arial,Helvetica,sans-serif;
 }
 
 html{
@@ -37,8 +35,8 @@ html{
 }
 
 body{
-    background:#080b18;
-    color:#ffffff;
+    background:#070b18;
+    color:#fff;
 }
 
 /* HEADER */
@@ -46,24 +44,24 @@ body{
 header{
     position:sticky;
     top:0;
-    z-index:1000;
-    background:rgba(8,11,24,0.88);
+    z-index:999;
+    background:rgba(7,11,24,.90);
     backdrop-filter:blur(15px);
-    border-bottom:1px solid rgba(255,255,255,0.08);
+    border-bottom:1px solid rgba(255,255,255,.08);
 }
 
 .navbar{
     max-width:1200px;
     margin:auto;
-    padding:18px 25px;
+    padding:17px 22px;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
 }
 
 .logo{
     font-size:25px;
-    font-weight:bold;
+    font-weight:800;
     color:#ffd166;
 }
 
@@ -72,9 +70,9 @@ header{
 }
 
 nav a{
-    color:#ddd;
     text-decoration:none;
-    margin-left:25px;
+    color:#cbd0df;
+    margin-left:24px;
     font-size:15px;
 }
 
@@ -87,31 +85,27 @@ nav a:hover{
 .hero{
     min-height:650px;
     display:flex;
-    align-items:center;
     justify-content:center;
+    align-items:center;
     text-align:center;
     padding:70px 20px;
-    position:relative;
-    overflow:hidden;
     background:
-    radial-gradient(circle at 20% 20%, rgba(168,85,247,.28), transparent 30%),
-    radial-gradient(circle at 80% 30%, rgba(59,130,246,.22), transparent 30%),
-    radial-gradient(circle at 50% 90%, rgba(255,209,102,.12), transparent 35%);
+    radial-gradient(circle at 20% 20%,rgba(168,85,247,.30),transparent 30%),
+    radial-gradient(circle at 80% 30%,rgba(59,130,246,.22),transparent 30%),
+    radial-gradient(circle at 50% 90%,rgba(255,209,102,.12),transparent 35%);
 }
 
 .hero-content{
     max-width:850px;
-    position:relative;
-    z-index:2;
 }
 
 .badge{
     display:inline-block;
     padding:9px 18px;
-    border:1px solid rgba(255,209,102,.4);
+    border:1px solid rgba(255,209,102,.45);
     border-radius:50px;
     color:#ffd166;
-    background:rgba(255,209,102,.08);
+    background:rgba(255,209,102,.07);
     margin-bottom:25px;
     font-size:14px;
 }
@@ -119,54 +113,54 @@ nav a:hover{
 .hero h1{
     font-size:64px;
     line-height:1.05;
-    margin-bottom:25px;
+    margin-bottom:24px;
 }
 
-.gradient-text{
+.gradient{
     background:linear-gradient(90deg,#ffd166,#c084fc,#60a5fa);
     -webkit-background-clip:text;
     color:transparent;
 }
 
 .hero p{
-    color:#b9bfd3;
-    font-size:19px;
+    color:#aeb5c9;
+    font-size:18px;
     line-height:1.7;
-    margin-bottom:35px;
+    margin-bottom:32px;
 }
 
-.hero-buttons{
+.buttons{
     display:flex;
     justify-content:center;
-    gap:15px;
+    gap:14px;
     flex-wrap:wrap;
 }
 
 .btn{
-    padding:14px 27px;
-    border-radius:12px;
-    text-decoration:none;
-    font-weight:bold;
     display:inline-block;
+    text-decoration:none;
+    padding:14px 26px;
+    border-radius:12px;
+    font-weight:bold;
     transition:.3s;
 }
 
-.btn-primary{
+.primary{
     background:linear-gradient(135deg,#a855f7,#6d28d9);
-    color:white;
-    box-shadow:0 10px 30px rgba(168,85,247,.3);
+    color:#fff;
+    box-shadow:0 10px 30px rgba(168,85,247,.25);
 }
 
-.btn-primary:hover{
+.primary:hover{
     transform:translateY(-3px);
 }
 
-.btn-outline{
-    border:1px solid #555b70;
-    color:white;
+.outline{
+    color:#fff;
+    border:1px solid #4a5065;
 }
 
-.btn-outline:hover{
+.outline:hover{
     border-color:#ffd166;
     color:#ffd166;
 }
@@ -176,134 +170,137 @@ nav a:hover{
 section{
     max-width:1200px;
     margin:auto;
-    padding:80px 25px;
+    padding:80px 22px;
 }
 
-.section-title{
+.title{
     text-align:center;
-    margin-bottom:45px;
+    margin-bottom:42px;
 }
 
-.section-title h2{
+.title h2{
     font-size:38px;
-    margin-bottom:12px;
+    margin-bottom:10px;
 }
 
-.section-title p{
-    color:#9da4ba;
+.title p{
+    color:#9199ae;
 }
 
 /* SEARCH */
 
-.search-box{
+.search{
     max-width:650px;
-    margin:0 auto 45px;
+    margin:0 auto 40px;
 }
 
-.search-box input{
+.search input{
     width:100%;
-    padding:17px 20px;
+    padding:16px 20px;
     border-radius:14px;
-    border:1px solid #34394d;
-    background:#111526;
-    color:white;
-    outline:none;
+    border:1px solid #343a4e;
+    background:#111629;
+    color:#fff;
     font-size:16px;
+    outline:none;
 }
 
-.search-box input:focus{
+.search input:focus{
     border-color:#a855f7;
 }
 
-/* BOOK GRID */
+/* BOOKS */
 
 .books{
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:25px;
+    gap:24px;
 }
 
 .book{
+    position:relative;
+    overflow:hidden;
     background:linear-gradient(145deg,#12172b,#0d1020);
     border:1px solid rgba(255,255,255,.08);
     border-radius:22px;
-    overflow:hidden;
-    transition:.35s;
-    position:relative;
+    transition:.3s;
 }
 
 .book:hover{
     transform:translateY(-8px);
     border-color:#a855f7;
-    box-shadow:0 20px 50px rgba(0,0,0,.4);
+    box-shadow:0 20px 45px rgba(0,0,0,.4);
 }
 
-.book-cover{
+.cover{
     height:230px;
     display:flex;
     align-items:center;
     justify-content:center;
     text-align:center;
-    padding:25px;
-    background:
-    linear-gradient(135deg,#312e81,#7e22ce);
+    padding:20px;
+    background:linear-gradient(135deg,#312e81,#7e22ce);
 }
 
-.book:nth-child(2) .book-cover{
+.book:nth-child(2) .cover{
     background:linear-gradient(135deg,#064e3b,#0f766e);
 }
 
-.book:nth-child(3) .book-cover{
+.book:nth-child(3) .cover{
     background:linear-gradient(135deg,#7c2d12,#be123c);
 }
 
-.book-icon{
+.cover-icon{
     font-size:55px;
     margin-bottom:10px;
 }
 
-.book-cover h3{
+.cover h3{
     font-size:22px;
 }
 
-.book-info{
+.info{
     padding:22px;
 }
 
-.book-info p{
-    color:#9da4ba;
+.info h3{
+    font-size:21px;
+}
+
+.info p{
+    color:#9ba3b8;
     line-height:1.6;
     font-size:14px;
-    margin:12px 0 20px;
+    margin:12px 0 18px;
 }
 
 .price{
     color:#ffd166;
-    font-size:24px;
+    font-size:25px;
     font-weight:bold;
 }
 
 .buy{
     display:block;
-    text-align:center;
-    margin-top:18px;
+    margin-top:17px;
     padding:13px;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    font-weight:bold;
     border-radius:10px;
     background:linear-gradient(90deg,#a855f7,#7c3aed);
-    color:white;
-    text-decoration:none;
-    font-weight:bold;
 }
 
 .tag{
     position:absolute;
-    top:15px;
-    right:15px;
-    background:#ffd166;
-    color:#151515;
+    top:14px;
+    right:14px;
     padding:6px 10px;
+    background:#ffd166;
+    color:#111;
     border-radius:20px;
-    font-size:12px;
+    font-size:11px;
     font-weight:bold;
 }
 
@@ -316,20 +313,20 @@ section{
 }
 
 .feature{
-    background:#111526;
-    border:1px solid #252a3c;
+    background:#111629;
+    border:1px solid #252b3e;
     border-radius:18px;
-    padding:28px 20px;
+    padding:28px 18px;
     text-align:center;
 }
 
 .feature-icon{
     font-size:35px;
-    margin-bottom:15px;
+    margin-bottom:14px;
 }
 
 .feature h3{
-    margin-bottom:10px;
+    margin-bottom:9px;
 }
 
 .feature p{
@@ -341,22 +338,20 @@ section{
 /* ABOUT */
 
 .about{
-    background:
-    linear-gradient(135deg,rgba(168,85,247,.09),rgba(59,130,246,.05));
-    border:1px solid rgba(255,255,255,.06);
-    border-radius:25px;
     padding:45px;
+    border-radius:25px;
+    border:1px solid rgba(255,255,255,.07);
+    background:linear-gradient(135deg,rgba(168,85,247,.10),rgba(59,130,246,.05));
 }
 
 .about h2{
-    margin-bottom:20px;
     font-size:35px;
+    margin-bottom:20px;
 }
 
 .about p{
     color:#aeb5c9;
     line-height:1.8;
-    font-size:16px;
 }
 
 /* CTA */
@@ -364,8 +359,7 @@ section{
 .cta{
     text-align:center;
     padding:80px 20px;
-    background:
-    radial-gradient(circle at center,rgba(168,85,247,.18),transparent 55%);
+    background:radial-gradient(circle,rgba(168,85,247,.17),transparent 55%);
 }
 
 .cta h2{
@@ -375,16 +369,27 @@ section{
 
 .cta p{
     color:#aeb5c9;
-    margin-bottom:30px;
+    margin-bottom:28px;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+}
+
+.contact p{
+    color:#aeb5c9;
+    line-height:2;
 }
 
 /* FOOTER */
 
 footer{
     border-top:1px solid #222638;
-    padding:35px 20px;
     text-align:center;
-    color:#777f96;
+    padding:35px 20px;
+    color:#737c94;
 }
 
 footer strong{
@@ -406,7 +411,6 @@ footer strong{
     .features{
         grid-template-columns:1fr 1fr;
     }
-
 }
 
 @media(max-width:600px){
@@ -416,11 +420,11 @@ footer strong{
     }
 
     .hero{
-        min-height:580px;
+        min-height:570px;
     }
 
     .hero h1{
-        font-size:39px;
+        font-size:38px;
     }
 
     .hero p{
@@ -446,15 +450,12 @@ footer strong{
     .cta h2{
         font-size:32px;
     }
-
 }
 
 </style>
 </head>
 
 <body>
-
-<!-- HEADER -->
 
 <header>
 
@@ -488,7 +489,7 @@ Digital<span>Reads</span> 📚
 
 <h1>
 Your Next Great
-<span class="gradient-text">eBook</span>
+<span class="gradient">eBook</span>
 Starts Here.
 </h1>
 
@@ -497,13 +498,13 @@ Hindi में आसान भाषा में AI, Computer, Spoken English
 और Digital Learning की useful eBooks।
 </p>
 
-<div class="hero-buttons">
+<div class="buttons">
 
-<a href="#books" class="btn btn-primary">
+<a href="#books" class="btn primary">
 📚 Explore eBooks
 </a>
 
-<a href="#about" class="btn btn-outline">
+<a href="#about" class="btn outline">
 Know More
 </a>
 
@@ -518,32 +519,30 @@ Know More
 
 <section id="books">
 
-<div class="section-title">
+<div class="title">
 
 <h2>📚 Featured eBooks</h2>
 
-<p>
-Simple knowledge. Practical learning. Affordable price.
-</p>
+<p>Simple knowledge. Practical learning. Affordable price.</p>
 
 </div>
 
 
-<div class="search-box">
+<div class="search">
 
 <input
-type="text"
 id="search"
+type="text"
 placeholder="🔍 Search your eBook..."
 onkeyup="searchBooks()">
 
 </div>
 
 
-<div class="books" id="bookList">
+<div class="books">
 
 
-<!-- BOOK 1 -->
+<!-- AI BOOK -->
 
 <div class="book">
 
@@ -551,11 +550,11 @@ onkeyup="searchBooks()">
 🔥 Bestseller
 </div>
 
-<div class="book-cover">
+<div class="cover">
 
 <div>
 
-<div class="book-icon">🤖</div>
+<div class="cover-icon">🤖</div>
 
 <h3>
 AI Tools<br>
@@ -566,20 +565,22 @@ for Beginners
 
 </div>
 
-<div class="book-info">
+<div class="info">
 
 <h3>AI Tools for Beginners</h3>
 
 <p>
-AI को आसान भाषा में सीखें और ChatGPT,
-AI Images, Videos और Online Work का उपयोग समझें।
+AI को आसान भाषा में सीखें। ChatGPT,
+AI Images, Videos और Online Work को समझें।
 </p>
 
 <div class="price">
 ₹99
 </div>
 
-<a href="#" class="buy">
+<a
+href="https://rzp.io/rzp/aJvPncI"
+class="buy">
 Buy Now →
 </a>
 
@@ -588,7 +589,7 @@ Buy Now →
 </div>
 
 
-<!-- BOOK 2 -->
+<!-- COMPUTER BOOK -->
 
 <div class="book">
 
@@ -596,11 +597,11 @@ Buy Now →
 ⭐ Popular
 </div>
 
-<div class="book-cover">
+<div class="cover">
 
 <div>
 
-<div class="book-icon">💻</div>
+<div class="cover-icon">💻</div>
 
 <h3>
 Computer<br>
@@ -611,20 +612,22 @@ Basics
 
 </div>
 
-<div class="book-info">
+<div class="info">
 
 <h3>Computer Basics</h3>
 
 <p>
-Computer की basic जानकारी बिल्कुल आसान
-भाषा में सीखने के लिए beginner guide।
+Computer की basic जानकारी beginner
+के लिए आसान भाषा में सीखें।
 </p>
 
 <div class="price">
 ₹79
 </div>
 
-<a href="#" class="buy">
+<a
+href="https://rzp.io/rzp/aJvPncI"
+class="buy">
 Buy Now →
 </a>
 
@@ -633,15 +636,15 @@ Buy Now →
 </div>
 
 
-<!-- BOOK 3 -->
+<!-- ENGLISH BOOK -->
 
 <div class="book">
 
-<div class="book-cover">
+<div class="cover">
 
 <div>
 
-<div class="book-icon">🗣️</div>
+<div class="cover-icon">🗣️</div>
 
 <h3>
 Spoken<br>
@@ -652,7 +655,7 @@ English
 
 </div>
 
-<div class="book-info">
+<div class="info">
 
 <h3>Spoken English</h3>
 
@@ -665,7 +668,9 @@ Daily conversation और practical English
 ₹99
 </div>
 
-<a href="#" class="buy">
+<a
+href="https://rzp.io/rzp/aJvPncI"
+class="buy">
 Buy Now →
 </a>
 
@@ -683,75 +688,53 @@ Buy Now →
 
 <section id="features">
 
-<div class="section-title">
+<div class="title">
 
 <h2>✨ Why DigitalReads?</h2>
 
-<p>
-Learning को simple और practical बनाने की कोशिश।
-</p>
+<p>Learning को simple और practical बनाने की कोशिश।</p>
 
 </div>
-
 
 <div class="features">
 
 <div class="feature">
 
-<div class="feature-icon">
-📱
-</div>
+<div class="feature-icon">📱</div>
 
 <h3>Easy Learning</h3>
 
-<p>
-Simple Hindi और easy examples के साथ।
-</p>
+<p>Simple Hindi और easy examples के साथ।</p>
 
 </div>
-
 
 <div class="feature">
 
-<div class="feature-icon">
-💰
-</div>
+<div class="feature-icon">💰</div>
 
 <h3>Affordable</h3>
 
-<p>
-कम कीमत में useful digital knowledge।
-</p>
+<p>कम कीमत में useful digital knowledge।</p>
 
 </div>
-
 
 <div class="feature">
 
-<div class="feature-icon">
-⚡
-</div>
+<div class="feature-icon">⚡</div>
 
 <h3>Practical</h3>
 
-<p>
-Real-world काम आने वाली जानकारी।
-</p>
+<p>Real-world काम आने वाली जानकारी।</p>
 
 </div>
-
 
 <div class="feature">
 
-<div class="feature-icon">
-🚀
-</div>
+<div class="feature-icon">🚀</div>
 
 <h3>Learn Faster</h3>
 
-<p>
-Short और focused learning material।
-</p>
+<p>Short और focused learning material।</p>
 
 </div>
 
@@ -766,15 +749,12 @@ Short और focused learning material।
 
 <div class="about">
 
-<h2>
-About DigitalReads
-</h2>
+<h2>About DigitalReads</h2>
 
 <p>
 DigitalReads एक modern digital eBook platform है जहाँ
-हम AI, Computer, Spoken English और Digital Learning
-से जुड़ी आसान और practical eBooks उपलब्ध कराने का प्रयास
-करते हैं।
+AI, Computer, Spoken English और Digital Learning से जुड़ी
+आसान और practical eBooks उपलब्ध कराने का प्रयास किया जाता है।
 </p>
 
 <br>
@@ -793,15 +773,13 @@ DigitalReads एक modern digital eBook platform है जहाँ
 
 <div class="cta">
 
-<h2>
-Ready to Learn Something New? 🚀
-</h2>
+<h2>Ready to Learn Something New? 🚀</h2>
 
 <p>
 अपनी पसंद की eBook चुनें और आज से सीखना शुरू करें।
 </p>
 
-<a href="#books" class="btn btn-primary">
+<a href="#books" class="btn primary">
 Explore Books
 </a>
 
@@ -812,21 +790,17 @@ Explore Books
 
 <section id="contact">
 
-<div class="section-title">
+<div class="contact">
+
+<div class="title">
 
 <h2>📩 Contact DigitalReads</h2>
 
-<p>
-Business और eBook related queries के लिए contact करें।
-</p>
+<p>Business और eBook related queries के लिए contact करें।</p>
 
 </div>
 
-<div style="text-align:center;color:#aeb5c9;">
-
 <p>📧 Email: your@email.com</p>
-
-<br>
 
 <p>🌐 DigitalReads</p>
 
@@ -834,8 +808,6 @@ Business और eBook related queries के लिए contact करें।
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
 
@@ -868,10 +840,9 @@ function searchBooks(){
         book.innerText.toLowerCase();
 
         if(text.includes(input)){
-            book.style.display="block";
-        }
-        else{
-            book.style.display="none";
+            book.style.display = "";
+        }else{
+            book.style.display = "none";
         }
 
     });
