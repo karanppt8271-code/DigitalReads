@@ -26,7 +26,7 @@ const books = [
             "10 Useful AI Tools",
             "30-Day AI Learning Plan"
         ],
-        paymentLink: ""
+       paymentLink: "https://rzp.io/rzp/dMGNzZs"
     },
 
     {
