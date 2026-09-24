@@ -1,1429 +1,796 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DigitalReads | Buy Premium eBooks Online</title>
-
-<meta name="description"
-content="DigitalReads - Discover and buy useful Hindi and English eBooks on AI, technology, computers, study and digital skills.">
-
-<meta name="keywords"
-content="DigitalReads, Hindi ebooks, AI ebook, technology ebook, digital books, buy ebooks online">
-
-<meta name="robots" content="index, follow">
-
-<meta name="google-site-verification"
-content="9l-6toET2V0MBsjPtMFxvaHQtagYRy1emV5KMFTqzb0">
-
-<link rel="canonical"
-href="https://karanppt8271-code.github.io/DigitalReads/">
-
-<meta property="og:title"
-content="DigitalReads | Premium eBooks">
-
-<meta property="og:description"
-content="Discover useful eBooks for AI, technology, study and digital skills.">
-
-<meta property="og:type" content="website">
-
-<meta property="og:url"
-content="https://karanppt8271-code.github.io/DigitalReads/">
-
-<style>
-
-/* =========================
-   RESET
-========================= */
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-html{
-    scroll-behavior:smooth;
-}
-
-body{
-    font-family:Arial, Helvetica, sans-serif;
-    background:#ffffff;
-    color:#222;
-    line-height:1.5;
-}
-
-a{
-    text-decoration:none;
-    color:inherit;
-}
-
-button,
-input{
-    font-family:inherit;
-}
-
-
-/* =========================
-   TOP BAR
-========================= */
-
-.top-bar{
-    background:#111827;
-    color:#fff;
-    text-align:center;
-    padding:9px 15px;
-    font-size:13px;
-}
-
-
-/* =========================
-   HEADER
-========================= */
-
-header{
-    background:#fff;
-    border-bottom:1px solid #e5e7eb;
-    position:sticky;
-    top:0;
-    z-index:1000;
-}
-
-.navbar{
-    max-width:1200px;
-    margin:auto;
-    padding:17px 20px;
-
-    display:flex;
-    align-items:center;
-    gap:30px;
-}
-
-.logo{
-    font-size:27px;
-    font-weight:800;
-    color:#111827;
-    white-space:nowrap;
-}
-
-.logo span{
-    color:#7c3aed;
-}
-
-.search-area{
-    flex:1;
-    position:relative;
-}
-
-.search-area input{
-    width:100%;
-    padding:13px 48px 13px 18px;
-
-    border:1px solid #d1d5db;
-    border-radius:7px;
-
-    font-size:15px;
-    outline:none;
-}
-
-.search-area input:focus{
-    border-color:#7c3aed;
-}
-
-.search-icon{
-    position:absolute;
-    right:17px;
-    top:11px;
-    font-size:20px;
-    color:#777;
-}
-
-.nav-buttons{
-    display:flex;
-    gap:20px;
-    align-items:center;
-}
-
-.nav-buttons a{
-    font-size:14px;
-    color:#374151;
-}
-
-.nav-buttons a:hover{
-    color:#7c3aed;
-}
-
-.cart{
-    font-size:20px;
-}
-
-
-/* =========================
-   CATEGORY BAR
-========================= */
-
-.category-bar{
-    border-bottom:1px solid #e5e7eb;
-    background:#fff;
-}
-
-.categories{
-    max-width:1200px;
-    margin:auto;
-
-    padding:11px 20px;
-
-    display:flex;
-    gap:27px;
-
-    overflow-x:auto;
-    white-space:nowrap;
-}
-
-.categories a{
-    color:#4b5563;
-    font-size:14px;
-}
-
-.categories a:hover{
-    color:#7c3aed;
-}
-
-
-/* =========================
-   HERO
-========================= */
-
-.hero{
-    background:
-    linear-gradient(
-        120deg,
-        #f5f3ff,
-        #faf5ff,
-        #ffffff
-    );
-
-    border-bottom:1px solid #eee;
-}
-
-.hero-inner{
-    max-width:1200px;
-    margin:auto;
-
-    padding:65px 20px;
-
-    display:grid;
-    grid-template-columns:1.1fr .9fr;
-    gap:50px;
-    align-items:center;
-}
-
-.hero-content .small{
-    color:#7c3aed;
-    font-size:13px;
-    font-weight:700;
-    text-transform:uppercase;
-    letter-spacing:1.5px;
-    margin-bottom:12px;
-}
-
-.hero-content h1{
-    font-size:48px;
-    line-height:1.08;
-    color:#111827;
-    margin-bottom:20px;
-}
-
-.hero-content h1 span{
-    color:#7c3aed;
-}
-
-.hero-content p{
-    max-width:600px;
-    color:#6b7280;
-    font-size:17px;
-    margin-bottom:28px;
-}
-
-.hero-buttons{
-    display:flex;
-    gap:12px;
-    flex-wrap:wrap;
-}
-
-.primary-btn{
-    background:#7c3aed;
-    color:#fff;
-
-    padding:13px 22px;
-
-    border-radius:6px;
-
-    font-weight:700;
-    font-size:15px;
-
-    display:inline-block;
-
-    transition:.25s;
-}
-
-.primary-btn:hover{
-    background:#6d28d9;
-    transform:translateY(-2px);
-}
-
-.secondary-btn{
-    border:1px solid #d1d5db;
-    background:#fff;
-
-    padding:12px 21px;
-
-    border-radius:6px;
-
-    font-weight:600;
-    font-size:15px;
-}
-
-.secondary-btn:hover{
-    border-color:#7c3aed;
-    color:#7c3aed;
-}
-
-.hero-books{
-    display:flex;
-    justify-content:center;
-    align-items:end;
-    gap:15px;
-}
-
-.hero-book{
-    width:155px;
-    height:225px;
-
-    border-radius:4px;
-
-    padding:20px 14px;
-
-    color:white;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-    box-shadow:
-    0 15px 30px rgba(0,0,0,.18);
-
-    transform:rotate(-5deg);
-}
-
-.hero-book:nth-child(2){
-    width:175px;
-    height:250px;
-    transform:rotate(2deg);
-}
-
-.hero-book:nth-child(3){
-    transform:rotate(6deg);
-}
-
-.hero-book.one{
-    background:linear-gradient(145deg,#111827,#374151);
-}
-
-.hero-book.two{
-    background:linear-gradient(145deg,#6d28d9,#a855f7);
-}
-
-.hero-book.three{
-    background:linear-gradient(145deg,#b45309,#f59e0b);
-}
-
-.hero-book .book-label{
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:1px;
-}
-
-.hero-book h3{
-    font-size:20px;
-    line-height:1.15;
-}
-
-
-/* =========================
-   MAIN
-========================= */
-
-.container{
-    max-width:1200px;
-    margin:auto;
-    padding:55px 20px;
-}
-
-.section-heading{
-    display:flex;
-    justify-content:space-between;
-    align-items:end;
-    margin-bottom:28px;
-}
-
-.section-heading h2{
-    font-size:28px;
-    color:#111827;
-}
-
-.section-heading p{
-    color:#6b7280;
-    font-size:14px;
-    margin-top:4px;
-}
-
-.view-all{
-    color:#7c3aed;
-    font-weight:700;
-    font-size:14px;
-}
-
-
-/* =========================
-   BOOK GRID
-========================= */
-
-.book-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:24px;
-}
-
-.book-card{
-    border:1px solid #e5e7eb;
-    background:#fff;
-
-    border-radius:7px;
-
-    overflow:hidden;
-
-    transition:.25s;
-}
-
-.book-card:hover{
-    transform:translateY(-5px);
-
-    box-shadow:
-    0 15px 35px rgba(0,0,0,.09);
-
-    border-color:#d8b4fe;
-}
-
-.book-cover{
-    height:260px;
-
-    padding:25px 20px;
-
-    display:flex;
-    flex-direction:column;
-    justify-content:space-between;
-
-    color:white;
-
-    position:relative;
-}
-
-.cover-ai{
-    background:linear-gradient(145deg,#111827,#4c1d95);
-}
-
-.cover-computer{
-    background:linear-gradient(145deg,#1e3a8a,#3b82f6);
-}
-
-.cover-english{
-    background:linear-gradient(145deg,#065f46,#10b981);
-}
-
-.cover-future{
-    background:linear-gradient(145deg,#7c2d12,#f97316);
-}
-
-.cover-small{
-    font-size:10px;
-    text-transform:uppercase;
-    letter-spacing:1.2px;
-    opacity:.8;
-}
-
-.book-cover h3{
-    font-size:25px;
-    line-height:1.12;
-}
-
-.book-cover .emoji{
-    position:absolute;
-    right:18px;
-    top:18px;
-    font-size:34px;
-}
-
-.book-info{
-    padding:18px;
-}
-
-.book-info .category{
-    font-size:11px;
-    color:#7c3aed;
-    font-weight:700;
-    text-transform:uppercase;
-}
-
-.book-info h3{
-    margin-top:7px;
-    font-size:17px;
-    color:#111827;
-    line-height:1.3;
-}
-
-.book-info p{
-    color:#6b7280;
-    font-size:13px;
-    margin:8px 0 15px;
-}
-
-.book-bottom{
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    gap:8px;
-}
-
-.price{
-    font-size:19px;
-    font-weight:800;
-    color:#111827;
-}
-
-.details-btn{
-    border:1px solid #d8b4fe;
-    color:#7c3aed;
-
-    padding:7px 11px;
-
-    border-radius:5px;
-
-    font-size:12px;
-    font-weight:700;
-}
-
-.details-btn:hover{
-    background:#7c3aed;
-    color:#fff;
-}
-
-.buy-btn{
-    display:block;
-
-    margin-top:10px;
-
-    text-align:center;
-
-    background:#111827;
-    color:#fff;
-
-    padding:9px;
-
-    border-radius:5px;
-
-    font-size:13px;
-    font-weight:700;
-}
-
-.buy-btn:hover{
-    background:#7c3aed;
-}
-
-
-/* =========================
-   FEATURES
-========================= */
-
-.features-section{
-    background:#f9fafb;
-
-    border-top:1px solid #eee;
-    border-bottom:1px solid #eee;
-}
-
-.features{
-    max-width:1200px;
-    margin:auto;
-
-    padding:45px 20px;
-
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-}
-
-.feature{
-    display:flex;
-    gap:14px;
-    align-items:flex-start;
-}
-
-.feature-icon{
-    font-size:30px;
-}
-
-.feature h3{
-    color:#111827;
-    font-size:16px;
-    margin-bottom:4px;
-}
-
-.feature p{
-    color:#6b7280;
-    font-size:13px;
-}
-
-
-/* =========================
-   ABOUT
-========================= */
-
-.about{
-    max-width:900px;
-    margin:auto;
-    text-align:center;
-}
-
-.about h2{
-    font-size:30px;
-    color:#111827;
-    margin-bottom:15px;
-}
-
-.about p{
-    color:#6b7280;
-    font-size:16px;
-}
-
-
-/* =========================
-   NEWSLETTER
-========================= */
-
-.newsletter{
-    background:#111827;
-    color:#fff;
-    padding:55px 20px;
-    text-align:center;
-}
-
-.newsletter h2{
-    font-size:29px;
-    margin-bottom:8px;
-}
-
-.newsletter p{
-    color:#cbd5e1;
-    margin-bottom:25px;
-}
-
-.newsletter-form{
-    max-width:520px;
-    margin:auto;
-
-    display:flex;
-    gap:8px;
-}
-
-.newsletter-form input{
-    flex:1;
-
-    padding:13px 15px;
-
-    border:none;
-    border-radius:5px;
-
-    outline:none;
-}
-
-.newsletter-form button{
-    border:none;
-
-    background:#7c3aed;
-    color:#fff;
-
-    padding:0 20px;
-
-    border-radius:5px;
-
-    font-weight:700;
-
-    cursor:pointer;
-}
-
-
-/* =========================
-   FOOTER
-========================= */
-
-footer{
-    background:#0b1120;
-    color:#9ca3af;
-
-    padding:45px 20px 25px;
-}
-
-.footer-inner{
-    max-width:1200px;
-    margin:auto;
-
-    display:grid;
-    grid-template-columns:2fr 1fr 1fr 1fr;
-    gap:40px;
-}
-
-.footer-logo{
-    color:#fff;
-    font-size:23px;
-    font-weight:800;
-    margin-bottom:12px;
-}
-
-.footer-logo span{
-    color:#a855f7;
-}
-
-.footer-column h3{
-    color:#fff;
-    font-size:15px;
-    margin-bottom:14px;
-}
-
-.footer-column a{
-    display:block;
-    font-size:13px;
-    margin:9px 0;
-}
-
-.footer-column a:hover{
-    color:#c084fc;
-}
-
-.footer-bottom{
-    max-width:1200px;
-    margin:35px auto 0;
-
-    padding-top:20px;
-
-    border-top:1px solid #1f2937;
-
-    text-align:center;
-
-    font-size:12px;
-}
-
-
-/* =========================
-   SEARCH RESULT
-========================= */
-
-.no-results{
-    display:none;
-    text-align:center;
-    padding:40px;
-    color:#6b7280;
-}
-
-
-/* =========================
-   MOBILE
-========================= */
-
-@media(max-width:950px){
-
-    .navbar{
-        flex-wrap:wrap;
-    }
-
-    .search-area{
-        order:3;
-        flex-basis:100%;
-    }
-
-    .hero-inner{
-        grid-template-columns:1fr;
-    }
-
-    .hero-content{
-        text-align:center;
-    }
-
-    .hero-content p{
-        margin-left:auto;
-        margin-right:auto;
-    }
-
-    .hero-buttons{
-        justify-content:center;
-    }
-
-    .book-grid{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .features{
-        grid-template-columns:repeat(2,1fr);
-    }
-
-    .footer-inner{
-        grid-template-columns:repeat(2,1fr);
-    }
-}
-
-
-@media(max-width:600px){
-
-    .navbar{
-        gap:13px;
-    }
-
-    .logo{
-        font-size:23px;
-    }
-
-    .nav-buttons a{
-        display:none;
-    }
-
-    .hero-inner{
-        padding:45px 18px;
-    }
-
-    .hero-content h1{
-        font-size:36px;
-    }
-
-    .hero-books{
-        transform:scale(.82);
-        margin:-20px 0;
-    }
-
-    .container{
-        padding:40px 15px;
-    }
-
-    .section-heading{
-        align-items:flex-start;
-    }
-
-    .section-heading h2{
-        font-size:23px;
-    }
-
-    .book-grid{
-        grid-template-columns:1fr 1fr;
-        gap:12px;
-    }
-
-    .book-cover{
-        height:210px;
-        padding:17px;
-    }
-
-    .book-cover h3{
-        font-size:19px;
-    }
-
-    .book-info{
-        padding:13px;
-    }
-
-    .book-info h3{
-        font-size:15px;
-    }
-
-    .book-bottom{
-        flex-direction:column;
-        align-items:stretch;
-    }
-
-    .details-btn{
-        text-align:center;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .newsletter-form{
-        flex-direction:column;
-    }
-
-    .newsletter-form button{
-        padding:12px;
-    }
-
-    .footer-inner{
-        grid-template-columns:1fr;
-        gap:25px;
-    }
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DigitalReads - Buy eBooks Online</title>
+
+    <meta name="description"
+        content="DigitalReads - Buy useful eBooks on AI, Computer, English, Digital Skills and more.">
+
+    <meta name="google-site-verification"
+        content="9l-6toET2V0MBsjPtMFxvaHQtagYRy1emV5KMFTqzb0">
+
+    <link rel="canonical"
+        href="https://karanppt8271-code.github.io/DigitalReads/">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f7fb;
+            color: #202124;
+        }
+
+        /* TOP BAR */
+        .topbar {
+            background: #111827;
+            color: white;
+            text-align: center;
+            padding: 9px;
+            font-size: 14px;
+        }
+
+        /* HEADER */
+        header {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 16px 20px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .logo {
+            font-size: 26px;
+            font-weight: bold;
+            color: #5b21b6;
+            text-decoration: none;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: #f59e0b;
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 520px;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 13px 18px;
+            border: 1px solid #d1d5db;
+            border-radius: 30px;
+            outline: none;
+            font-size: 15px;
+        }
+
+        .search-box input:focus {
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.1);
+        }
+
+        .header-btn {
+            background: #5b21b6;
+            color: white;
+            padding: 11px 18px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: bold;
+        }
+
+        /* CATEGORY BAR */
+        .category-bar {
+            background: white;
+            border-bottom: 1px solid #e5e7eb;
+        }
+
+        .categories {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 20px;
+
+            display: flex;
+            gap: 22px;
+            overflow-x: auto;
+        }
+
+        .categories button {
+            border: none;
+            background: none;
+            cursor: pointer;
+            color: #4b5563;
+            font-size: 14px;
+            white-space: nowrap;
+        }
+
+        .categories button:hover {
+            color: #5b21b6;
+        }
+
+        /* HERO */
+        .hero {
+            max-width: 1200px;
+            margin: 30px auto;
+            padding: 55px 45px;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(135deg, #17122b, #4c1d95);
+
+            color: white;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+        }
+
+        .hero-content {
+            max-width: 650px;
+        }
+
+        .hero h1 {
+            font-size: 46px;
+            line-height: 1.15;
+            margin-bottom: 18px;
+        }
+
+        .hero p {
+            font-size: 18px;
+            line-height: 1.6;
+            color: #e9d5ff;
+            margin-bottom: 25px;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background: #f59e0b;
+            color: #111827;
+            padding: 14px 25px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .hero-emoji {
+            font-size: 110px;
+        }
+
+        /* SECTION */
+        .section {
+            max-width: 1200px;
+            margin: 55px auto;
+            padding: 0 20px;
+        }
+
+        .section-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+        }
+
+        .section-title h2 {
+            font-size: 28px;
+        }
+
+        .section-title p {
+            color: #6b7280;
+            margin-top: 5px;
+        }
+
+        /* BOOK GRID */
+        .book-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 22px;
+        }
+
+        .book-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e5e7eb;
+
+            transition: 0.25s;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.10);
+        }
+
+        .book-cover {
+            width: 100%;
+            height: 270px;
+            object-fit: cover;
+            background: #17122b;
+        }
+
+        .book-info {
+            padding: 18px;
+            flex: 1;
+
+            display: flex;
+            flex-direction: column;
+        }
+
+        .category {
+            color: #7c3aed;
+            font-size: 12px;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 8px;
+        }
+
+        .book-info h3 {
+            font-size: 18px;
+            margin-bottom: 8px;
+            line-height: 1.35;
+        }
+
+        .book-info p {
+            color: #6b7280;
+            font-size: 14px;
+            line-height: 1.5;
+            margin-bottom: 15px;
+        }
+
+        .price {
+            margin-top: auto;
+            margin-bottom: 15px;
+        }
+
+        .new-price {
+            font-size: 22px;
+            font-weight: bold;
+            color: #111827;
+        }
+
+        .old-price {
+            margin-left: 7px;
+            color: #9ca3af;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+
+        .view-btn {
+            display: block;
+            text-align: center;
+            background: #5b21b6;
+            color: white;
+            text-decoration: none;
+            padding: 11px;
+            border-radius: 8px;
+            font-weight: bold;
+        }
+
+        .view-btn:hover {
+            background: #4c1d95;
+        }
+
+        /* TOPICS */
+        .topic-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .topic {
+            background: white;
+            border: 1px solid #e5e7eb;
+            padding: 25px;
+            border-radius: 15px;
+            text-align: center;
+            transition: 0.2s;
+        }
+
+        .topic:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.07);
+        }
+
+        .topic-icon {
+            font-size: 35px;
+            margin-bottom: 12px;
+        }
+
+        .topic h3 {
+            font-size: 17px;
+        }
+
+        /* FEATURES */
+        .features {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 20px;
+
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .feature {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            border: 1px solid #e5e7eb;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 12px;
+        }
+
+        .feature h3 {
+            margin-bottom: 8px;
+        }
+
+        .feature p {
+            color: #6b7280;
+            line-height: 1.5;
+            font-size: 14px;
+        }
+
+        /* ABOUT */
+        .about {
+            max-width: 1200px;
+            margin: 60px auto;
+            padding: 0 20px;
+        }
+
+        .about-box {
+            background: #111827;
+            color: white;
+            border-radius: 20px;
+            padding: 45px;
+        }
+
+        .about-box h2 {
+            margin-bottom: 15px;
+            font-size: 30px;
+        }
+
+        .about-box p {
+            color: #d1d5db;
+            line-height: 1.7;
+            max-width: 850px;
+        }
+
+        /* NEWSLETTER */
+        .newsletter {
+            max-width: 1000px;
+            margin: 60px auto;
+            padding: 40px 20px;
+            text-align: center;
+        }
+
+        .newsletter h2 {
+            font-size: 30px;
+            margin-bottom: 10px;
+        }
+
+        .newsletter p {
+            color: #6b7280;
+            margin-bottom: 20px;
+        }
+
+        .newsletter-form {
+            display: flex;
+            max-width: 550px;
+            margin: auto;
+            gap: 10px;
+        }
+
+        .newsletter-form input {
+            flex: 1;
+            padding: 13px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+        }
+
+        .newsletter-form button {
+            border: none;
+            background: #5b21b6;
+            color: white;
+            padding: 13px 20px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        /* FOOTER */
+        footer {
+            background: #111827;
+            color: white;
+            margin-top: 60px;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 20px;
+
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        footer h3 {
+            margin-bottom: 15px;
+        }
+
+        footer p {
+            color: #9ca3af;
+            line-height: 1.6;
+            font-size: 14px;
+        }
+
+        footer a {
+            display: block;
+            color: #d1d5db;
+            text-decoration: none;
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        footer a:hover {
+            color: #f59e0b;
+        }
+
+        .copyright {
+            border-top: 1px solid #374151;
+            text-align: center;
+            padding: 18px;
+            color: #9ca3af;
+            font-size: 13px;
+        }
+
+        /* NO RESULTS */
+        .no-results {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            color: #6b7280;
+            grid-column: 1 / -1;
+        }
+
+        /* MOBILE */
+        @media (max-width: 900px) {
+
+            .book-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .topic-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero h1 {
+                font-size: 36px;
+            }
+
+            .hero-emoji {
+                font-size: 80px;
+            }
+        }
+
+        @media (max-width: 650px) {
+
+            .header-container {
+                flex-wrap: wrap;
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+            }
+
+            .search-box {
+                order: 3;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .header-btn {
+                display: none;
+            }
+
+            .hero {
+                margin: 20px;
+                padding: 35px 25px;
+                text-align: center;
+            }
+
+            .hero h1 {
+                font-size: 32px;
+            }
+
+            .hero p {
+                font-size: 16px;
+            }
+
+            .hero-emoji {
+                display: none;
+            }
+
+            .book-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .book-cover {
+                height: 220px;
+            }
+
+            .book-info {
+                padding: 12px;
+            }
+
+            .book-info h3 {
+                font-size: 16px;
+            }
+
+            .book-info p {
+                font-size: 13px;
+            }
+
+            .topic-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .features {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-container {
+                grid-template-columns: 1fr;
+            }
+
+            .newsletter-form {
+                flex-direction: column;
+            }
+        }
+    </style>
 </head>
 
 <body>
 
-
-<!-- TOP BAR -->
-
-<div class="top-bar">
-    📚 Discover useful digital books • Learn • Grow • Upgrade Your Skills
-</div>
-
-
-<!-- HEADER -->
-
-<header>
-
-<div class="navbar">
-
-    <a href="index.html" class="logo">
-        Digital<span>Reads</span>
-    </a>
-
-
-    <div class="search-area">
-
-        <input
-            type="text"
-            id="searchInput"
-            placeholder="Search eBooks, topics, authors..."
-            onkeyup="searchBooks()"
-        >
-
-        <span class="search-icon">⌕</span>
-
+    <!-- TOP BAR -->
+    <div class="topbar">
+        📚 New eBooks • Learn More • Grow More
     </div>
 
 
-    <div class="nav-buttons">
+    <!-- HEADER -->
+    <header>
 
-        <a href="#ebooks">eBooks</a>
+        <div class="header-container">
 
-        <a href="#about">About</a>
-
-        <a href="#contact">Contact</a>
-
-        <span class="cart">🛒</span>
-
-    </div>
-
-</div>
-
-</header>
-
-
-<!-- CATEGORY BAR -->
-
-<div class="category-bar">
-
-<div class="categories">
-
-    <a href="#ebooks">All eBooks</a>
-
-    <a href="#featured">Featured</a>
-
-    <a href="#popular">Popular</a>
-
-    <a href="#new">New Releases</a>
-
-    <a href="#ebooks">AI & Technology</a>
-
-    <a href="#ebooks">Education</a>
-
-    <a href="#ebooks">Digital Skills</a>
-
-</div>
-
-</div>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<div class="hero-inner">
-
-
-    <div class="hero-content">
-
-        <div class="small">
-            Welcome to DigitalReads
-        </div>
-
-        <h1>
-            Discover Books That
-            <span>Move You Forward.</span>
-        </h1>
-
-        <p>
-            Explore practical eBooks on AI, technology,
-            computers, English and digital skills —
-            created for modern learners.
-        </p>
-
-
-        <div class="hero-buttons">
-
-            <a href="#ebooks" class="primary-btn">
-                Explore eBooks
+            <a href="index.html" class="logo">
+                Digital<span>Reads</span>
             </a>
 
-            <a href="#about" class="secondary-btn">
-                Learn More
+            <div class="search-box">
+                <input
+                    type="text"
+                    id="searchInput"
+                    placeholder="Search eBooks, topics..."
+                    onkeyup="searchBooks()">
+            </div>
+
+            <a href="#books" class="header-btn">
+                Browse Books
             </a>
 
         </div>
 
-    </div>
+    </header>
 
 
-    <div class="hero-books">
+    <!-- CATEGORY BAR -->
+    <div class="category-bar">
 
-        <div class="hero-book one">
+        <div class="categories">
 
-            <div class="book-label">
-                DigitalReads
-            </div>
+            <button onclick="filterCategory('All')">
+                All
+            </button>
 
-            <h3>
-                Computer<br>
-                Basics
-            </h3>
-
-            <div>📘</div>
-
-        </div>
-
-
-        <div class="hero-book two">
-
-            <div class="book-label">
-                Featured
-            </div>
-
-            <h3>
-                AI Tools<br>
-                for Beginners
-            </h3>
-
-            <div>🤖</div>
-
-        </div>
-
-
-        <div class="hero-book three">
-
-            <div class="book-label">
-                Learn
-            </div>
-
-            <h3>
-                Spoken<br>
-                English
-            </h3>
-
-            <div>📖</div>
-
-        </div>
-
-    </div>
-
-</div>
-
-</section>
-
-
-<!-- FEATURED -->
-
-<section class="container" id="featured">
-
-<div class="section-heading">
-
-    <div>
-
-        <h2>
-            Featured eBooks
-        </h2>
-
-        <p>
-            Hand-picked books for learning and growth
-        </p>
-
-    </div>
-
-    <a href="#ebooks" class="view-all">
-        View all →
-    </a>
-
-</div>
-
-
-<div class="book-grid">
-
-
-    <!-- BOOK 1 -->
-
-    <div class="book-card">
-
-        <div class="book-cover cover-ai">
-
-            <span class="cover-small">
-                DigitalReads
-            </span>
-
-            <h3>
-                AI Tools<br>
-                for Beginners
-            </h3>
-
-            <span class="emoji">
-                🤖
-            </span>
-
-        </div>
-
-
-        <div class="book-info">
-
-            <span class="category">
+            <button onclick="filterCategory('AI & Technology')">
                 AI & Technology
-            </span>
+            </button>
 
-            <h3>
-                AI Tools for Beginners
-            </h3>
-
-            <p>
-                AI को आसान भाषा में सीखें और इस्तेमाल करें।
-            </p>
-
-
-            <div class="book-bottom">
-
-                <span class="price">
-                    ₹99
-                </span>
-
-                <a
-                    href="book-details.html"
-                    class="details-btn"
-                >
-                    View Details
-                </a>
-
-            </div>
-
-
-            <a
-                href="https://rzp.io/rzp/aJvPncI"
-                target="_blank"
-                class="buy-btn"
-            >
-                Buy Now
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- BOOK 2 -->
-
-    <div class="book-card">
-
-        <div class="book-cover cover-computer">
-
-            <span class="cover-small">
-                DigitalReads
-            </span>
-
-            <h3>
-                Computer<br>
-                Basics
-            </h3>
-
-            <span class="emoji">
-                💻
-            </span>
-
-        </div>
-
-
-        <div class="book-info">
-
-            <span class="category">
-                Computers
-            </span>
-
-            <h3>
-                Computer Basics
-            </h3>
-
-            <p>
-                Computer सीखने वालों के लिए beginner guide।
-            </p>
-
-
-            <div class="book-bottom">
-
-                <span class="price">
-                    ₹79
-                </span>
-
-                <a
-                    href="book-details.html"
-                    class="details-btn"
-                >
-                    View Details
-                </a>
-
-            </div>
-
-
-            <a
-                href="https://rzp.io/rzp/aJvPncI"
-                target="_blank"
-                class="buy-btn"
-            >
-                Buy Now
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- BOOK 3 -->
-
-    <div class="book-card">
-
-        <div class="book-cover cover-english">
-
-            <span class="cover-small">
-                DigitalReads
-            </span>
-
-            <h3>
-                Spoken<br>
-                English
-            </h3>
-
-            <span class="emoji">
-                🗣️
-            </span>
-
-        </div>
-
-
-        <div class="book-info">
-
-            <span class="category">
-                English
-            </span>
-
-            <h3>
-                Spoken English
-            </h3>
-
-            <p>
-                रोजमर्रा की English बोलना आसान तरीके से सीखें।
-            </p>
-
-
-            <div class="book-bottom">
-
-                <span class="price">
-                    ₹99
-                </span>
-
-                <a
-                    href="book-details.html"
-                    class="details-btn"
-                >
-                    View Details
-                </a>
-
-            </div>
-
-
-            <a
-                href="https://rzp.io/rzp/aJvPncI"
-                target="_blank"
-                class="buy-btn"
-            >
-                Buy Now
-            </a>
-
-        </div>
-
-    </div>
-
-
-    <!-- BOOK 4 -->
-
-    <div class="book-card">
-
-        <div class="book-cover cover-future">
-
-            <span class="cover-small">
-                Coming Soon
-            </span>
-
-            <h3>
-                Digital<br>
-                Skills
-            </h3>
-
-            <span class="emoji">
-                🚀
-            </span>
-
-        </div>
-
-
-        <div class="book-info">
-
-            <span class="category">
-                Digital Skills
-            </span>
-
-            <h3>
-                Digital Skills for Beginners
-            </h3>
-
-            <p>
-                Modern digital world के useful skills।
-            </p>
-
-
-            <div class="book-bottom">
-
-                <span class="price">
-                    Soon
-                </span>
-
-                <span class="details-btn">
-                    Coming Soon
-                </span>
-
-            </div>
-
-        </div>
-
-    </div>
-
-</div>
-
-
-<div class="no-results" id="noResults">
-
-    <h3>
-        No eBook found
-    </h3>
-
-    <p>
-        Try another search term.
-    </p>
-
-</div>
-
-</section>
-
-
-<!-- POPULAR -->
-
-<section class="container" id="popular">
-
-<div class="section-heading">
-
-    <div>
-
-        <h2>
-            Popular Topics
-        </h2>
-
-        <p>
-            Learn skills people are searching for
-        </p>
-
-    </div>
-
-</div>
-
-
-<div class="features">
-
-    <div class="feature">
-
-        <div class="feature-icon">
-            🤖
-        </div>
-
-        <div>
-
-            <h3>
-                Artificial Intelligence
-            </h3>
-
-            <p>
-                AI tools, ChatGPT and automation.
-            </p>
-
-        </div>
-
-    </div>
-
-
-    <div class="feature">
-
-        <div class="feature-icon">
-            💻
-        </div>
-
-        <div>
-
-            <h3>
+            <button onclick="filterCategory('Computer')">
                 Computer
-            </h3>
+            </button>
 
-            <p>
-                Computer basics and digital knowledge.
-            </p>
+            <button onclick="filterCategory('English')">
+                English
+            </button>
+
+            <button onclick="filterCategory('Digital Skills')">
+                Digital Skills
+            </button>
 
         </div>
 
     </div>
 
 
-    <div class="feature">
+    <!-- HERO -->
+    <section class="hero">
 
-        <div class="feature-icon">
+        <div class="hero-content">
+
+            <h1>
+                Discover Your Next
+                <br>
+                Great eBook
+            </h1>
+
+            <p>
+                Learn AI, Computer, English and Digital Skills
+                with easy-to-understand eBooks.
+            </p>
+
+            <a href="#books" class="hero-btn">
+                Explore eBooks →
+            </a>
+
+        </div>
+
+        <div class="hero-emoji">
             📚
         </div>
 
-        <div>
+    </section>
 
-            <h3>
-                Education
-            </h3>
+
+    <!-- BOOKS -->
+    <section class="section" id="books">
+
+        <div class="section-title">
+
+            <div>
+                <h2>Featured eBooks</h2>
+
+                <p>
+                    Choose a book and start learning today.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="book-grid" id="bookGrid">
+
+            <!-- Books will automatically appear here -->
+
+            <div class="no-results" id="noResults">
+                😔 No eBook found.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- POPULAR TOPICS -->
+    <section class="section">
+
+        <div class="section-title">
+
+            <div>
+                <h2>Popular Topics</h2>
+
+                <p>
+                    Explore books by topic.
+                </p>
+            </div>
+
+        </div>
+
+
+        <div class="topic-grid">
+
+            <div class="topic">
+                <div class="topic-icon">🤖</div>
+                <h3>Artificial Intelligence</h3>
+            </div>
+
+            <div class="topic">
+                <div class="topic-icon">💻</div>
+                <h3>Computer</h3>
+            </div>
+
+            <div class="topic">
+                <div class="topic-icon">🗣️</div>
+                <h3>English</h3>
+            </div>
+
+            <div class="topic">
+                <div class="topic-icon">📱</div>
+                <h3>Digital Skills</h3>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- FEATURES -->
+    <div class="features">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                ⚡
+            </div>
+
+            <h3>Instant Access</h3>
 
             <p>
-                Study and learning resources.
+                Buy your eBook and get access through
+                the available delivery system.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>Secure Payment</h3>
+
+            <p>
+                Payments are processed through
+                secure payment services.
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📖
+            </div>
+
+            <h3>Easy Learning</h3>
+
+            <p>
+                Simple and practical content designed
+                for beginners.
             </p>
 
         </div>
@@ -1431,410 +798,320 @@ footer{
     </div>
 
 
-    <div class="feature">
+    <!-- ABOUT -->
+    <section class="about">
 
-        <div class="feature-icon">
-            💼
-        </div>
+        <div class="about-box">
 
-        <div>
-
-            <h3>
-                Digital Work
-            </h3>
+            <h2>
+                About DigitalReads
+            </h2>
 
             <p>
-                Learn useful online and digital skills.
+                DigitalReads is an online eBook store where
+                learners can discover useful digital books
+                about AI, computers, English, technology and
+                other practical skills. Our goal is to make
+                learning simple and accessible.
             </p>
 
         </div>
 
-    </div>
-
-</div>
-
-</section>
+    </section>
 
 
-<!-- NEW RELEASES -->
-
-<section class="container" id="new">
-
-<div class="section-heading">
-
-    <div>
+    <!-- NEWSLETTER -->
+    <section class="newsletter">
 
         <h2>
-            New Releases
+            Stay Updated
         </h2>
 
         <p>
-            Fresh content coming to DigitalReads
+            Get updates about new eBooks and offers.
         </p>
 
-    </div>
+        <div class="newsletter-form">
 
-</div>
+            <input
+                type="email"
+                placeholder="Enter your email">
 
-
-<div class="about">
-
-    <h2>
-        More eBooks Are Coming Soon 📚
-    </h2>
-
-    <p>
-        We are building a growing collection of practical
-        eBooks for students, beginners, creators and
-        digital learners.
-    </p>
-
-</div>
-
-</section>
-
-
-<!-- FEATURES -->
-
-<section class="features-section">
-
-<div class="features">
-
-    <div class="feature">
-
-        <div class="feature-icon">
-            📖
-        </div>
-
-        <div>
-
-            <h3>
-                Practical Books
-            </h3>
-
-            <p>
-                Easy-to-understand content.
-            </p>
+            <button onclick="subscribeUser()">
+                Subscribe
+            </button>
 
         </div>
 
-    </div>
+    </section>
 
 
-    <div class="feature">
+    <!-- FOOTER -->
+    <footer>
 
-        <div class="feature-icon">
-            ⚡
+        <div class="footer-container">
+
+            <div>
+
+                <h3>
+                    DigitalReads
+                </h3>
+
+                <p>
+                    Your simple destination for useful
+                    digital eBooks.
+                </p>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Quick Links
+                </h3>
+
+                <a href="index.html">
+                    Home
+                </a>
+
+                <a href="#books">
+                    eBooks
+                </a>
+
+                <a href="privacy.html">
+                    Privacy Policy
+                </a>
+
+                <a href="#">
+                    Terms & Conditions
+                </a>
+
+            </div>
+
+
+            <div>
+
+                <h3>
+                    Contact
+                </h3>
+
+                <p>
+                    Email:
+                    your@email.com
+                </p>
+
+            </div>
+
         </div>
 
-        <div>
 
-            <h3>
-                Instant Access
-            </h3>
+        <div class="copyright">
 
-            <p>
-                Digital books, no physical delivery.
-            </p>
+            © 2026 DigitalReads. All Rights Reserved.
 
         </div>
 
-    </div>
+    </footer>
 
 
-    <div class="feature">
+    <!-- IMPORTANT: books.js -->
+    <script src="books.js"></script>
 
-        <div class="feature-icon">
-            🔒
-        </div>
 
-        <div>
+    <script>
 
-            <h3>
-                Secure Payment
-            </h3>
+        // ==========================================
+        // DISPLAY BOOKS
+        // ==========================================
 
-            <p>
-                Payments handled through Razorpay.
-            </p>
+        const bookGrid = document.getElementById("bookGrid");
+        const noResults = document.getElementById("noResults");
 
-        </div>
 
-    </div>
+        function displayBooks(bookList) {
 
+            bookGrid.innerHTML = "";
 
-    <div class="feature">
+            if (bookList.length === 0) {
 
-        <div class="feature-icon">
-            📱
-        </div>
+                noResults.style.display = "block";
 
-        <div>
+                bookGrid.appendChild(noResults);
 
-            <h3>
-                Read Anywhere
-            </h3>
+                return;
+            }
 
-            <p>
-                Access your digital books on supported devices.
-            </p>
+            noResults.style.display = "none";
 
-        </div>
 
-    </div>
+            bookList.forEach(function(book) {
 
-</div>
+                const card = document.createElement("div");
 
-</section>
+                card.className = "book-card";
 
+                card.innerHTML = `
 
-<!-- ABOUT -->
+                    <img
+                        class="book-cover"
+                        src="${book.cover}"
+                        alt="${book.title}">
 
-<section class="container" id="about">
+                    <div class="book-info">
 
-<div class="about">
+                        <div class="category">
+                            ${book.category}
+                        </div>
 
-    <h2>
-        About DigitalReads
-    </h2>
+                        <h3>
+                            ${book.title}
+                        </h3>
 
-    <p>
-        DigitalReads is a digital bookstore focused on
-        simple, practical and useful eBooks. Our goal is
-        to make learning resources accessible to modern
-        readers who want to develop new skills in AI,
-        technology, computers, English and digital work.
-    </p>
+                        <p>
+                            ${book.subtitle}
+                        </p>
 
-</div>
+                        <div class="price">
 
-</section>
+                            <span class="new-price">
+                                ₹${book.price}
+                            </span>
 
+                            ${
+                                book.oldPrice
+                                ? `<span class="old-price">
+                                    ₹${book.oldPrice}
+                                   </span>`
+                                : ""
+                            }
 
-<!-- NEWSLETTER -->
+                        </div>
 
-<section class="newsletter">
+                        <a
+                            class="view-btn"
+                            href="book-details.html?id=${book.id}">
 
-    <h2>
-        Stay Updated 📚
-    </h2>
+                            View Details
 
-    <p>
-        New eBooks and digital learning resources आने पर जानकारी पाएँ।
-    </p>
+                        </a>
 
+                    </div>
+                `;
 
-    <form
-        class="newsletter-form"
-        onsubmit="subscribeUser(event)"
-    >
+                bookGrid.appendChild(card);
 
-        <input
-            type="email"
-            id="emailInput"
-            placeholder="Enter your email"
-            required
-        >
-
-        <button type="submit">
-            Subscribe
-        </button>
-
-    </form>
-
-</section>
-
-
-<!-- FOOTER -->
-
-<footer id="contact">
-
-<div class="footer-inner">
-
-
-    <div class="footer-column">
-
-        <div class="footer-logo">
-            Digital<span>Reads</span>
-        </div>
-
-        <p>
-            Practical digital books for modern learners.
-        </p>
-
-        <br>
-
-        <p>
-            📧 your@email.com
-        </p>
-
-    </div>
-
-
-    <div class="footer-column">
-
-        <h3>
-            Explore
-        </h3>
-
-        <a href="#ebooks">
-            eBooks
-        </a>
-
-        <a href="#featured">
-            Featured
-        </a>
-
-        <a href="#popular">
-            Popular
-        </a>
-
-        <a href="#new">
-            New Releases
-        </a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-        <h3>
-            Information
-        </h3>
-
-        <a href="privacy.html">
-            Privacy Policy
-        </a>
-
-        <a href="#">
-            Terms & Conditions
-        </a>
-
-        <a href="#">
-            Refund Policy
-        </a>
-
-    </div>
-
-
-    <div class="footer-column">
-
-        <h3>
-            Support
-        </h3>
-
-        <a href="#contact">
-            Contact Us
-        </a>
-
-        <a href="#">
-            Help
-        </a>
-
-        <a href="#">
-            FAQ
-        </a>
-
-    </div>
-
-</div>
-
-
-<div class="footer-bottom">
-
-    © 2026 DigitalReads. All Rights Reserved.
-
-</div>
-
-</footer>
-
-
-<script>
-
-/* =========================
-   SEARCH
-========================= */
-
-function searchBooks(){
-
-    const input =
-        document
-        .getElementById("searchInput")
-        .value
-        .toLowerCase()
-        .trim();
-
-    const cards =
-        document.querySelectorAll(".book-card");
-
-    let found = 0;
-
-    cards.forEach(function(card){
-
-        const text =
-            card.innerText.toLowerCase();
-
-        if(text.includes(input)){
-
-            card.style.display = "";
-
-            found++;
-
-        }else{
-
-            card.style.display = "none";
+            });
 
         }
 
-    });
+
+        // ==========================================
+        // SEARCH
+        // ==========================================
+
+        function searchBooks() {
+
+            const searchText =
+                document
+                .getElementById("searchInput")
+                .value
+                .toLowerCase()
+                .trim();
 
 
-    const noResults =
-        document.getElementById("noResults");
+            const filteredBooks = books.filter(function(book) {
+
+                return (
+
+                    book.title
+                    .toLowerCase()
+                    .includes(searchText)
+
+                    ||
+
+                    book.subtitle
+                    .toLowerCase()
+                    .includes(searchText)
+
+                    ||
+
+                    book.category
+                    .toLowerCase()
+                    .includes(searchText)
+
+                );
+
+            });
 
 
-    if(found === 0 && input !== ""){
+            displayBooks(filteredBooks);
 
-        noResults.style.display = "block";
-
-    }else{
-
-        noResults.style.display = "none";
-
-    }
-
-}
+        }
 
 
-/* =========================
-   NEWSLETTER
-========================= */
+        // ==========================================
+        // CATEGORY FILTER
+        // ==========================================
 
-function subscribeUser(event){
+        function filterCategory(category) {
 
-    event.preventDefault();
+            if (category === "All") {
 
-    const email =
-        document
-        .getElementById("emailInput")
-        .value;
+                displayBooks(books);
 
-    if(email){
+                return;
+            }
 
-        alert(
-            "Thank you for subscribing to DigitalReads!"
-        );
 
-        document
-        .getElementById("emailInput")
-        .value = "";
+            const filteredBooks =
+                books.filter(function(book) {
 
-    }
+                    return book.category === category;
 
-}
+                });
 
-</script>
 
+            displayBooks(filteredBooks);
+
+        }
+
+
+        // ==========================================
+        // NEWSLETTER
+        // ==========================================
+
+        function subscribeUser() {
+
+            const email =
+                document
+                .querySelector(".newsletter-form input")
+                .value
+                .trim();
+
+
+            if (email === "") {
+
+                alert("Please enter your email.");
+
+                return;
+            }
+
+
+            alert(
+                "Thank you! You have been subscribed."
+            );
+
+        }
+
+
+        // ==========================================
+        // LOAD BOOKS
+        // ==========================================
+
+        displayBooks(books);
+
+    </script>
 
 </body>
 </html>
