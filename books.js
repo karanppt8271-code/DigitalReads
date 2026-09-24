@@ -4,7 +4,6 @@
 
 const books = [
 
-    // 📘 BOOK 1
     {
         id: "ai-tools",
         title: "AI Tools for Beginners",
@@ -12,11 +11,9 @@ const books = [
         category: "AI & Technology",
         price: 99,
         oldPrice: 149,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=AI+Tools",
-
+        cover: "covers/ai-tools.jpg",
         description:
             "Beginners के लिए AI सीखने की आसान eBook। इसमें ChatGPT, AI Images, AI Videos, AI Voice, Writing और Online Work जैसे topics बताए गए हैं।",
-
         chapters: [
             "AI क्या है?",
             "ChatGPT का इस्तेमाल",
@@ -29,12 +26,9 @@ const books = [
             "10 Useful AI Tools",
             "30-Day AI Learning Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 💻 BOOK 2
     {
         id: "computer-basics",
         title: "Computer Basics",
@@ -42,11 +36,9 @@ const books = [
         category: "Computer",
         price: 79,
         oldPrice: 129,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=Computer+Basics",
-
+        cover: "covers/computer-basics.jpg",
         description:
             "Computer सीखने वाले beginners के लिए आसान eBook। इसमें computer parts, Windows, files, folders, internet और basic computer skills समझाई गई हैं।",
-
         chapters: [
             "Computer क्या है?",
             "Computer के Parts",
@@ -59,12 +51,9 @@ const books = [
             "Online Safety",
             "Computer Practice Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 🗣️ BOOK 3
     {
         id: "spoken-english",
         title: "Spoken English for Beginners",
@@ -72,11 +61,9 @@ const books = [
         category: "English",
         price: 99,
         oldPrice: 149,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=Spoken+English",
-
+        cover: "covers/spoken-english.jpg",
         description:
             "Beginners के लिए Spoken English की आसान eBook। इसमें daily-use English sentences, vocabulary, grammar और speaking practice शामिल है।",
-
         chapters: [
             "English बोलना कैसे शुरू करें",
             "Daily Use English Words",
@@ -89,12 +76,9 @@ const books = [
             "Speaking Practice",
             "30-Day English Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 📱 BOOK 4
     {
         id: "digital-skills",
         title: "Digital Skills for Beginners",
@@ -102,11 +86,9 @@ const books = [
         category: "Digital Skills",
         price: 99,
         oldPrice: 149,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=Digital+Skills",
-
+        cover: "covers/digital-skills.jpg",
         description:
             "Digital दुनिया में काम करने के लिए जरूरी basic skills सीखने की आसान eBook।",
-
         chapters: [
             "Digital Skills क्या हैं?",
             "Smartphone और Computer",
@@ -119,12 +101,9 @@ const books = [
             "AI Tools का इस्तेमाल",
             "Digital Skills Practice Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 🤖 BOOK 5
     {
         id: "ai-tools-students",
         title: "AI Tools for Students",
@@ -132,11 +111,9 @@ const books = [
         category: "AI & Technology",
         price: 99,
         oldPrice: 149,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=AI+Students",
-
+        cover: "covers/ai-tools-students.jpg",
         description:
             "Students के लिए AI tools का practical इस्तेमाल सीखने की आसान eBook।",
-
         chapters: [
             "Students के लिए AI क्या है?",
             "ChatGPT से पढ़ाई",
@@ -149,12 +126,9 @@ const books = [
             "AI Safety और Ethics",
             "Student AI Study Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 🧠 BOOK 6
     {
         id: "chatgpt-master-guide",
         title: "ChatGPT Master Guide",
@@ -162,11 +136,9 @@ const books = [
         category: "AI & Technology",
         price: 149,
         oldPrice: 199,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=ChatGPT+Guide",
-
+        cover: "covers/chatgpt-master-guide.jpg",
         description:
             "ChatGPT को basic से practical level तक समझने के लिए आसान guide।",
-
         chapters: [
             "ChatGPT क्या है?",
             "Account और Basic Setup",
@@ -179,12 +151,9 @@ const books = [
             "Common Mistakes",
             "30 Useful ChatGPT Prompts"
         ],
-
         paymentLink: ""
     },
 
-
-    // 🎨 BOOK 7
     {
         id: "canva-beginners",
         title: "Canva for Beginners",
@@ -192,11 +161,9 @@ const books = [
         category: "Digital Skills",
         price: 99,
         oldPrice: 149,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=Canva",
-
+        cover: "covers/canva-beginners.jpg",
         description:
             "Beginners के लिए Canva design की आसान guide।",
-
         chapters: [
             "Canva क्या है?",
             "Canva Account बनाना",
@@ -209,12 +176,9 @@ const books = [
             "Design Tips",
             "Canva Practice Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // ▶️ BOOK 8
     {
         id: "youtube-channel",
         title: "YouTube Channel कैसे शुरू करें",
@@ -222,11 +186,9 @@ const books = [
         category: "YouTube",
         price: 99,
         oldPrice: 149,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=YouTube",
-
+        cover: "covers/youtube-channel.jpg",
         description:
             "Beginners के लिए YouTube channel शुरू करने की practical guide।",
-
         chapters: [
             "YouTube क्या है?",
             "Channel कैसे बनाएं",
@@ -239,12 +201,9 @@ const books = [
             "YouTube SEO Basics",
             "30-Day YouTube Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 💰 BOOK 9
     {
         id: "online-earning",
         title: "Online Earning for Beginners",
@@ -252,11 +211,9 @@ const books = [
         category: "Online Work",
         price: 149,
         oldPrice: 199,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=Online+Earning",
-
+        cover: "covers/online-earning.jpg",
         description:
             "Beginners के लिए online work और earning options को समझाने वाली practical eBook।",
-
         chapters: [
             "Online Earning क्या है?",
             "Laptop से काम करने के तरीके",
@@ -269,12 +226,9 @@ const books = [
             "Online Scam से बचाव",
             "Online Work Action Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 💼 BOOK 10
     {
         id: "freelancing-start",
         title: "Freelancing से शुरुआत",
@@ -282,11 +236,9 @@ const books = [
         category: "Freelancing",
         price: 149,
         oldPrice: 199,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=Freelancing",
-
+        cover: "covers/freelancing-start.jpg",
         description:
             "Freelancing शुरू करने वाले beginners के लिए step-by-step guide।",
-
         chapters: [
             "Freelancing क्या है?",
             "Freelancer कैसे बनें",
@@ -299,12 +251,9 @@ const books = [
             "Payment और Safety",
             "First Client Action Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 📝 BOOK 11
     {
         id: "ms-word-guide",
         title: "MS Word Complete Guide",
@@ -312,11 +261,9 @@ const books = [
         category: "Computer",
         price: 99,
         oldPrice: 149,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=MS+Word",
-
+        cover: "covers/ms-word-guide.jpg",
         description:
             "MS Word सीखने वाले beginners के लिए आसान practical guide।",
-
         chapters: [
             "MS Word क्या है?",
             "Word Interface",
@@ -329,12 +276,9 @@ const books = [
             "Print और PDF",
             "MS Word Practice"
         ],
-
         paymentLink: ""
     },
 
-
-    // 📊 BOOK 12
     {
         id: "excel-beginners",
         title: "Excel for Beginners",
@@ -342,11 +286,9 @@ const books = [
         category: "Computer",
         price: 129,
         oldPrice: 179,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=Excel",
-
+        cover: "covers/excel-beginners.jpg",
         description:
             "Beginners के लिए Microsoft Excel की basic जानकारी और practical skills।",
-
         chapters: [
             "Excel क्या है?",
             "Excel Interface",
@@ -359,12 +301,9 @@ const books = [
             "Simple Charts",
             "Excel Practice Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 📢 BOOK 13
     {
         id: "digital-marketing",
         title: "Digital Marketing Basics",
@@ -372,11 +311,9 @@ const books = [
         category: "Digital Marketing",
         price: 149,
         oldPrice: 199,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=Digital+Marketing",
-
+        cover: "covers/digital-marketing.jpg",
         description:
             "Digital marketing को basic level से समझने के लिए आसान eBook।",
-
         chapters: [
             "Digital Marketing क्या है?",
             "Online Audience समझना",
@@ -389,12 +326,9 @@ const books = [
             "AI और Digital Marketing",
             "Digital Marketing Practice Plan"
         ],
-
         paymentLink: ""
     },
 
-
-    // 📚 BOOK 14
     {
         id: "english-30-days",
         title: "English Speaking 30 Days",
@@ -402,11 +336,9 @@ const books = [
         category: "English",
         price: 99,
         oldPrice: 149,
-        cover: "https://via.placeholder.com/400x550/17122b/ffffff?text=English+30+Days",
-
+        cover: "covers/english-30-days.jpg",
         description:
             "English speaking improve करने के लिए 30-day practical learning plan।",
-
         chapters: [
             "Day 1-3: Basic English",
             "Day 4-6: Daily Use Words",
@@ -419,7 +351,6 @@ const books = [
             "Day 25-27: Common Mistakes",
             "Day 28-30: Final Speaking Challenge"
         ],
-
         paymentLink: ""
     }
 
