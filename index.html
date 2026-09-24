@@ -1,1298 +1,1578 @@
+```html
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>DigitalReads - Buy eBooks Online</title>
-
-<meta name="description"
-content="DigitalReads - Buy useful eBooks online.">
-
-<meta name="google-site-verification"
-content="9l-6toET2V0MBsjPtMFxvaHQtagYRy1emV5KMFTqzb0">
-
-<link rel="canonical"
-href="https://karanppt8271-code.github.io/DigitalReads/">
-
-<style>
-
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    background:#f5f6fa;
-    color:#202124;
-}
-
-/* TOP */
-.topbar{
-    background:#111827;
-    color:white;
-    text-align:center;
-    padding:9px;
-    font-size:14px;
-}
-
-/* HEADER */
-header{
-    background:white;
-    position:sticky;
-    top:0;
-    z-index:1000;
-    border-bottom:1px solid #ddd;
-}
-
-.header{
-    max-width:1200px;
-    margin:auto;
-    padding:16px 20px;
-
-    display:flex;
-    align-items:center;
-    gap:20px;
-}
-
-.logo{
-    text-decoration:none;
-    font-size:27px;
-    font-weight:bold;
-    color:#5b21b6;
-}
-
-.logo span{
-    color:#f59e0b;
-}
-
-.search{
-    flex:1;
-}
-
-.search input{
-    width:100%;
-    padding:13px 18px;
-    border:1px solid #ccc;
-    border-radius:30px;
-    outline:none;
-}
-
-.search input:focus{
-    border-color:#7c3aed;
-}
-
-.header-btn{
-    background:#5b21b6;
-    color:white;
-    padding:11px 18px;
-    border-radius:25px;
-    text-decoration:none;
-}
-
-/* CATEGORIES */
-.categories{
-    background:white;
-    border-bottom:1px solid #ddd;
-}
-
-.category-list{
-    max-width:1200px;
-    margin:auto;
-    padding:12px 20px;
-
-    display:flex;
-    gap:20px;
-    overflow-x:auto;
-}
-
-.category-list button{
-    border:0;
-    background:none;
-    cursor:pointer;
-    white-space:nowrap;
-    font-size:14px;
-}
-
-.category-list button:hover{
-    color:#5b21b6;
-}
-
-/* HERO */
-.hero{
-    max-width:1200px;
-    margin:30px auto;
-    padding:55px 45px;
-
-    border-radius:20px;
-
-    background:linear-gradient(
-        135deg,
-        #17122b,
-        #4c1d95
-    );
-
-    color:white;
-
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-}
-
-.hero h1{
-    font-size:45px;
-    margin-bottom:18px;
-}
-
-.hero p{
-    color:#e9d5ff;
-    font-size:18px;
-    line-height:1.6;
-    max-width:650px;
-}
-
-.hero-btn{
-    display:inline-block;
-    margin-top:25px;
-    background:#f59e0b;
-    color:#111827;
-    padding:14px 25px;
-    border-radius:30px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.hero-icon{
-    font-size:100px;
-}
-
-/* SECTION */
-.section{
-    max-width:1200px;
-    margin:50px auto;
-    padding:0 20px;
-}
-
-.section h2{
-    font-size:28px;
-    margin-bottom:8px;
-}
-
-.section-subtitle{
-    color:#6b7280;
-    margin-bottom:25px;
-}
-
-/* BOOK GRID */
-.book-grid{
-    display:grid;
-    grid-template-columns:
-        repeat(4,1fr);
-    gap:22px;
-}
-
-.book-card{
-    background:white;
-    border:1px solid #e5e7eb;
-    border-radius:15px;
-    overflow:hidden;
-
-    transition:.25s;
-
-    display:flex;
-    flex-direction:column;
-}
-
-.book-card:hover{
-    transform:translateY(-5px);
-    box-shadow:
-        0 12px 30px rgba(0,0,0,.10);
-}
-
-.book-cover{
-    width:100%;
-    height:270px;
-    object-fit:cover;
-    background:#17122b;
-}
-
-.book-info{
-    padding:18px;
-    display:flex;
-    flex-direction:column;
-    flex:1;
-}
-
-.book-category{
-    color:#7c3aed;
-    font-size:12px;
-    font-weight:bold;
-    text-transform:uppercase;
-    margin-bottom:8px;
-}
-
-.book-title{
-    font-size:18px;
-    margin-bottom:8px;
-}
-
-.book-subtitle{
-    color:#6b7280;
-    font-size:14px;
-    line-height:1.5;
-}
-
-.book-price{
-    margin-top:auto;
-    padding-top:15px;
-    margin-bottom:15px;
-}
-
-.price{
-    font-size:22px;
-    font-weight:bold;
-}
-
-.old-price{
-    color:#999;
-    text-decoration:line-through;
-    margin-left:7px;
-    font-size:14px;
-}
-
-.details-btn{
-    width:100%;
-    border:0;
-    background:#5b21b6;
-    color:white;
-    padding:12px;
-    border-radius:8px;
-    cursor:pointer;
-    font-weight:bold;
-}
-
-.details-btn:hover{
-    background:#4c1d95;
-}
-
-/* DETAILS */
-#detailsSection{
-    display:none;
-}
-
-.details-box{
-    max-width:1100px;
-    margin:auto;
-    background:white;
-    border-radius:20px;
-    padding:35px;
-
-    display:grid;
-    grid-template-columns:350px 1fr;
-    gap:45px;
-
-    box-shadow:
-        0 10px 35px rgba(0,0,0,.08);
-}
-
-.details-cover{
-    width:100%;
-    height:470px;
-    object-fit:cover;
-    border-radius:12px;
-}
-
-.details-category{
-    color:#7c3aed;
-    font-size:13px;
-    font-weight:bold;
-    text-transform:uppercase;
-    margin-bottom:12px;
-}
-
-.details-title{
-    font-size:38px;
-    margin-bottom:12px;
-}
-
-.details-subtitle{
-    color:#6b7280;
-    font-size:18px;
-    line-height:1.6;
-    margin-bottom:25px;
-}
-
-.details-price{
-    font-size:34px;
-    font-weight:bold;
-    margin-bottom:25px;
-}
-
-.buy-btn{
-    display:inline-block;
-    background:#5b21b6;
-    color:white;
-    padding:15px 35px;
-    border-radius:8px;
-    text-decoration:none;
-    font-weight:bold;
-}
-
-.back-btn{
-    display:inline-block;
-    margin-left:10px;
-    padding:14px 25px;
-    border:1px solid #ccc;
-    border-radius:8px;
-    text-decoration:none;
-    color:#333;
-}
-
-.about-book{
-    margin-top:30px;
-}
-
-.about-book h3{
-    margin-bottom:10px;
-}
-
-.about-book p{
-    color:#555;
-    line-height:1.7;
-}
-
-.chapters{
-    max-width:1100px;
-    margin:35px auto;
-}
-
-.chapters h2{
-    margin-bottom:20px;
-}
-
-.chapter-grid{
-    display:grid;
-    grid-template-columns:1fr 1fr;
-    gap:12px;
-}
-
-.chapter{
-    background:white;
-    padding:15px;
-    border:1px solid #ddd;
-    border-radius:8px;
-}
-
-/* TOPICS */
-.topic-grid{
-    display:grid;
-    grid-template-columns:
-        repeat(4,1fr);
-    gap:18px;
-}
-
-.topic{
-    background:white;
-    padding:25px;
-    text-align:center;
-    border-radius:15px;
-    border:1px solid #ddd;
-}
-
-.topic-icon{
-    font-size:35px;
-    margin-bottom:10px;
-}
-
-/* FEATURES */
-.features{
-    max-width:1200px;
-    margin:50px auto;
-    padding:0 20px;
-
-    display:grid;
-    grid-template-columns:
-        repeat(3,1fr);
-    gap:20px;
-}
-
-.feature{
-    background:white;
-    padding:25px;
-    border-radius:15px;
-    border:1px solid #ddd;
-}
-
-.feature-icon{
-    font-size:32px;
-    margin-bottom:10px;
-}
-
-.feature p{
-    color:#6b7280;
-    margin-top:8px;
-    line-height:1.5;
-}
-
-/* ABOUT */
-.about{
-    max-width:1200px;
-    margin:60px auto;
-    padding:0 20px;
-}
-
-.about-box{
-    background:#111827;
-    color:white;
-    padding:45px;
-    border-radius:20px;
-}
-
-.about-box h2{
-    margin-bottom:15px;
-}
-
-.about-box p{
-    color:#d1d5db;
-    line-height:1.7;
-}
-
-/* FOOTER */
-footer{
-    margin-top:60px;
-    background:#111827;
-    color:white;
-}
-
-.footer{
-    max-width:1200px;
-    margin:auto;
-    padding:45px 20px;
-
-    display:grid;
-    grid-template-columns:
-        2fr 1fr 1fr;
-    gap:40px;
-}
-
-footer p,
-footer a{
-    color:#9ca3af;
-    font-size:14px;
-    line-height:1.7;
-}
-
-footer a{
-    display:block;
-    text-decoration:none;
-    margin-bottom:8px;
-}
-
-footer a:hover{
-    color:#f59e0b;
-}
-
-.copyright{
-    border-top:1px solid #374151;
-    text-align:center;
-    padding:18px;
-    color:#9ca3af;
-    font-size:13px;
-}
-
-/* NO RESULT */
-.no-result{
-    grid-column:1/-1;
-    text-align:center;
-    padding:50px;
-    color:#777;
-}
-
-/* MOBILE */
-@media(max-width:900px){
-
-    .book-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .topic-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-    }
-
-    .details-box{
-        grid-template-columns:1fr;
-    }
-
-}
-
-@media(max-width:650px){
-
-    .header{
-        flex-wrap:wrap;
-    }
-
-    .logo{
-        width:100%;
-        text-align:center;
-    }
-
-    .search{
-        width:100%;
-        order:3;
-    }
-
-    .header-btn{
-        display:none;
-    }
-
-    .hero{
-        margin:20px;
-        padding:35px 25px;
-        text-align:center;
-    }
-
-    .hero h1{
-        font-size:32px;
-    }
-
-    .hero-icon{
-        display:none;
-    }
-
-    .book-grid{
-        grid-template-columns:
-            repeat(2,1fr);
-        gap:12px;
-    }
-
-    .book-cover{
-        height:220px;
-    }
-
-    .book-info{
-        padding:12px;
-    }
-
-    .book-title{
-        font-size:16px;
-    }
-
-    .details-box{
-        padding:20px;
-    }
-
-    .details-cover{
-        height:400px;
-    }
-
-    .details-title{
-        font-size:30px;
-    }
-
-    .chapter-grid{
-        grid-template-columns:1fr;
-    }
-
-    .features{
-        grid-template-columns:1fr;
-    }
-
-    .footer{
-        grid-template-columns:1fr;
-    }
-
-}
-
-</style>
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>DigitalReads - Buy eBooks Online</title>
+
+    <meta name="description"
+          content="DigitalReads पर AI, Computer, English, Digital Skills, Freelancing और Online Work की useful eBooks पढ़ें और खरीदें।">
+
+    <meta name="keywords"
+          content="ebooks, Hindi ebooks, AI ebooks, computer ebooks, DigitalReads, online books">
+
+    <meta name="author" content="DigitalReads">
+
+    <!-- Google Search Console Verification -->
+    <meta name="google-site-verification"
+          content="9l-6toET2V0MBsjPtMFxvaHQtagYRy1emV5KMFTqzb0">
+
+    <style>
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background: #f6f7fb;
+            color: #17122b;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        button {
+            font-family: inherit;
+        }
+
+        /* =========================
+           HEADER
+        ========================== */
+
+        header {
+            background: #17122b;
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+        }
+
+        .header-main {
+            max-width: 1200px;
+            margin: auto;
+            min-height: 72px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            padding: 12px 20px;
+        }
+
+        .logo {
+            font-size: 27px;
+            font-weight: 800;
+            color: #f3c65d;
+            white-space: nowrap;
+        }
+
+        .logo span {
+            color: white;
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 500px;
+            display: flex;
+        }
+
+        .search-box input {
+            width: 100%;
+            border: none;
+            outline: none;
+            padding: 13px 17px;
+            border-radius: 8px 0 0 8px;
+            font-size: 15px;
+        }
+
+        .search-box button {
+            border: none;
+            background: #d9a62e;
+            color: #17122b;
+            padding: 0 20px;
+            font-weight: bold;
+            border-radius: 0 8px 8px 0;
+            cursor: pointer;
+        }
+
+        /* =========================
+           CATEGORY BAR
+        ========================== */
+
+        .category-bar {
+            background: white;
+            border-bottom: 1px solid #e6e6e6;
+        }
+
+        .categories {
+            max-width: 1200px;
+            margin: auto;
+            padding: 12px 20px;
+            display: flex;
+            gap: 10px;
+            overflow-x: auto;
+        }
+
+        .categories button {
+            border: 1px solid #ddd;
+            background: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            cursor: pointer;
+            white-space: nowrap;
+            color: #333;
+        }
+
+        .categories button:hover,
+        .categories button.active {
+            background: #17122b;
+            color: white;
+            border-color: #17122b;
+        }
+
+        /* =========================
+           HERO
+        ========================== */
+
+        .hero {
+            background:
+                linear-gradient(135deg, #17122b, #29204a);
+            color: white;
+            padding: 75px 20px;
+        }
+
+        .hero-content {
+            max-width: 1200px;
+            margin: auto;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .hero h1 {
+            font-size: clamp(35px, 5vw, 60px);
+            line-height: 1.1;
+            margin-bottom: 20px;
+        }
+
+        .hero h1 span {
+            color: #f3c65d;
+        }
+
+        .hero p {
+            color: #e7e3f2;
+            max-width: 650px;
+            font-size: 18px;
+            margin-bottom: 28px;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 13px 22px;
+            border-radius: 8px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .btn-primary {
+            background: #f3c65d;
+            color: #17122b;
+        }
+
+        .btn-primary:hover {
+            background: #ffd978;
+        }
+
+        .btn-secondary {
+            border: 1px solid rgba(255,255,255,0.5);
+            color: white;
+            background: transparent;
+        }
+
+        .hero-card {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            padding: 30px;
+            border-radius: 18px;
+            text-align: center;
+        }
+
+        .hero-card .big-icon {
+            font-size: 80px;
+            margin-bottom: 10px;
+        }
+
+        /* =========================
+           SECTION
+        ========================== */
+
+        .section {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+        }
+
+        .section-heading {
+            display: flex;
+            justify-content: space-between;
+            align-items: end;
+            gap: 20px;
+            margin-bottom: 28px;
+        }
+
+        .section-heading h2 {
+            font-size: 32px;
+        }
+
+        .section-heading p {
+            color: #666;
+        }
+
+        /* =========================
+           BOOK GRID
+        ========================== */
+
+        .books-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+
+        .book-card {
+            background: white;
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #e8e8e8;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+            transition: 0.25s ease;
+        }
+
+        .book-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        }
+
+        /* IMPORTANT:
+           FULL COVER IMAGE WITHOUT CROPPING
+        */
+
+        .book-cover {
+            width: 100%;
+            height: 330px;
+            background: #eee;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            padding: 10px;
+        }
+
+        .book-cover img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            display: block;
+        }
+
+        .book-info {
+            padding: 18px;
+        }
+
+        .book-category {
+            font-size: 12px;
+            color: #80631e;
+            font-weight: bold;
+            text-transform: uppercase;
+            margin-bottom: 7px;
+        }
+
+        .book-title {
+            font-size: 19px;
+            font-weight: 700;
+            line-height: 1.3;
+            margin-bottom: 7px;
+        }
+
+        .book-subtitle {
+            color: #666;
+            font-size: 14px;
+            min-height: 45px;
+        }
+
+        .price-row {
+            display: flex;
+            align-items: center;
+            gap: 9px;
+            margin: 14px 0;
+        }
+
+        .price {
+            font-size: 21px;
+            font-weight: bold;
+            color: #17122b;
+        }
+
+        .old-price {
+            color: #999;
+            text-decoration: line-through;
+            font-size: 14px;
+        }
+
+        .book-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .details-btn {
+            flex: 1;
+            background: #17122b;
+            color: white;
+            border: none;
+            border-radius: 7px;
+            padding: 11px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .buy-btn {
+            flex: 1;
+            background: #f3c65d;
+            color: #17122b;
+            border: none;
+            border-radius: 7px;
+            padding: 11px;
+            cursor: pointer;
+            font-weight: bold;
+        }
+
+        .details-btn:hover {
+            background: #29204a;
+        }
+
+        .buy-btn:hover {
+            background: #ffd978;
+        }
+
+        /* =========================
+           TOPICS
+        ========================== */
+
+        .topics {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 18px;
+        }
+
+        .topic {
+            background: white;
+            padding: 25px;
+            border-radius: 14px;
+            border: 1px solid #e7e7e7;
+            text-align: center;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        .topic:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+        }
+
+        .topic-icon {
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+        .topic h3 {
+            margin-bottom: 5px;
+        }
+
+        .topic p {
+            color: #777;
+            font-size: 14px;
+        }
+
+        /* =========================
+           FEATURES
+        ========================== */
+
+        .features {
+            background: white;
+        }
+
+        .features-grid {
+            max-width: 1200px;
+            margin: auto;
+            padding: 60px 20px;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .feature {
+            text-align: center;
+            padding: 25px;
+        }
+
+        .feature-icon {
+            font-size: 45px;
+            margin-bottom: 12px;
+        }
+
+        .feature p {
+            color: #666;
+            margin-top: 7px;
+        }
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about-box {
+            background: #17122b;
+            color: white;
+            border-radius: 18px;
+            padding: 45px;
+        }
+
+        .about-box h2 {
+            color: #f3c65d;
+            margin-bottom: 15px;
+        }
+
+        .about-box p {
+            color: #ddd8e8;
+            max-width: 850px;
+        }
+
+        /* =========================
+           DETAILS MODAL
+        ========================== */
+
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0,0,0,0.72);
+            z-index: 2000;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .modal.show {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-box {
+            width: min(950px, 100%);
+            background: white;
+            border-radius: 18px;
+            overflow: hidden;
+            position: relative;
+            max-height: 92vh;
+            overflow-y: auto;
+        }
+
+        .close-modal {
+            position: absolute;
+            right: 15px;
+            top: 12px;
+            width: 38px;
+            height: 38px;
+            border: none;
+            border-radius: 50%;
+            background: #17122b;
+            color: white;
+            font-size: 22px;
+            cursor: pointer;
+            z-index: 5;
+        }
+
+        .details-content {
+            display: grid;
+            grid-template-columns: 300px 1fr;
+            gap: 30px;
+            padding: 35px;
+        }
+
+        .details-cover {
+            background: #f2f2f2;
+            min-height: 400px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 12px;
+        }
+
+        .details-cover img {
+            width: 100%;
+            height: 100%;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        .details-info h2 {
+            font-size: 30px;
+            line-height: 1.2;
+            margin-bottom: 10px;
+        }
+
+        .details-info .subtitle {
+            color: #666;
+            margin-bottom: 18px;
+        }
+
+        .details-description {
+            margin-bottom: 20px;
+        }
+
+        .chapters {
+            margin: 15px 0 25px;
+            padding-left: 20px;
+        }
+
+        .chapters li {
+            margin-bottom: 7px;
+        }
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: #11101c;
+            color: white;
+            margin-top: 50px;
+        }
+
+        .footer-inner {
+            max-width: 1200px;
+            margin: auto;
+            padding: 45px 20px;
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1fr;
+            gap: 40px;
+        }
+
+        .footer-logo {
+            font-size: 25px;
+            font-weight: bold;
+            color: #f3c65d;
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            color: #bbb;
+        }
+
+        footer h3 {
+            margin-bottom: 12px;
+        }
+
+        footer a {
+            color: #bbb;
+            display: block;
+            margin: 7px 0;
+        }
+
+        footer a:hover {
+            color: #f3c65d;
+        }
+
+        .copyright {
+            border-top: 1px solid #2d2b38;
+            padding: 18px 20px;
+            text-align: center;
+            color: #999;
+        }
+
+        /* =========================
+           EMPTY MESSAGE
+        ========================== */
+
+        .no-books {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 50px;
+            color: #777;
+            background: white;
+            border-radius: 12px;
+        }
+
+        /* =========================
+           RESPONSIVE
+        ========================== */
+
+        @media (max-width: 1000px) {
+
+            .books-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            .topics {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .hero-content {
+                grid-template-columns: 1fr;
+            }
+
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 700px) {
+
+            .header-main {
+                flex-wrap: wrap;
+            }
+
+            .search-box {
+                order: 3;
+                flex-basis: 100%;
+                max-width: none;
+            }
+
+            .books-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 14px;
+            }
+
+            .book-cover {
+                height: 250px;
+            }
+
+            .book-info {
+                padding: 13px;
+            }
+
+            .book-title {
+                font-size: 16px;
+            }
+
+            .book-subtitle {
+                font-size: 13px;
+            }
+
+            .book-actions {
+                flex-direction: column;
+            }
+
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-inner {
+                grid-template-columns: 1fr;
+            }
+
+            .details-content {
+                grid-template-columns: 1fr;
+                padding: 25px;
+            }
+
+            .details-cover {
+                min-height: 300px;
+            }
+        }
+
+        @media (max-width: 430px) {
+
+            .books-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .book-cover {
+                height: 390px;
+            }
+
+            .topics {
+                grid-template-columns: 1fr;
+            }
+
+            .hero {
+                padding: 55px 20px;
+            }
+
+            .hero h1 {
+                font-size: 38px;
+            }
+
+            .section-heading {
+                display: block;
+            }
+        }
+
+    </style>
 </head>
 
 <body>
 
-<!-- TOP BAR -->
-<div class="topbar">
-    📚 DigitalReads — Learn More, Grow More
-</div>
+<!-- =========================
+     HEADER
+========================== -->
 
-
-<!-- HEADER -->
 <header>
 
-<div class="header">
+    <div class="header-main">
 
-<a href="index.html" class="logo">
-    Digital<span>Reads</span>
-</a>
+        <a href="#" class="logo">
+            Digital<span>Reads</span>
+        </a>
 
-<div class="search">
+        <div class="search-box">
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search eBooks..."
+                oninput="searchBooks()"
+            >
 
-<input
-type="text"
-id="searchInput"
-placeholder="Search eBooks..."
-oninput="searchBooks()">
+            <button onclick="searchBooks()">
+                🔍
+            </button>
+        </div>
 
-</div>
-
-<a href="#books"
-class="header-btn">
-Browse Books
-</a>
-
-</div>
+    </div>
 
 </header>
 
 
-<!-- CATEGORY -->
-<div class="categories">
+<!-- =========================
+     CATEGORY BAR
+========================== -->
 
-<div class="category-list">
+<div class="category-bar">
 
-<button onclick="filterBooks('All')">
-All
-</button>
+    <div class="categories">
 
-<button onclick="filterBooks('AI & Technology')">
-AI & Technology
-</button>
+        <button class="active" onclick="filterCategory('All', this)">
+            All
+        </button>
 
-<button onclick="filterBooks('Computer')">
-Computer
-</button>
+        <button onclick="filterCategory('AI & Technology', this)">
+            AI & Technology
+        </button>
 
-<button onclick="filterBooks('English')">
-English
-</button>
+        <button onclick="filterCategory('Computer', this)">
+            Computer
+        </button>
 
-<button onclick="filterBooks('Digital Skills')">
-Digital Skills
-</button>
+        <button onclick="filterCategory('English', this)">
+            English
+        </button>
+
+        <button onclick="filterCategory('Digital Skills', this)">
+            Digital Skills
+        </button>
+
+        <button onclick="filterCategory('YouTube', this)">
+            YouTube
+        </button>
+
+        <button onclick="filterCategory('Online Work', this)">
+            Online Work
+        </button>
+
+        <button onclick="filterCategory('Freelancing', this)">
+            Freelancing
+        </button>
+
+        <button onclick="filterCategory('Digital Marketing', this)">
+            Digital Marketing
+        </button>
+
+    </div>
 
 </div>
 
-</div>
 
+<!-- =========================
+     HERO
+========================== -->
 
-<!-- HERO -->
 <section class="hero">
 
-<div>
+    <div class="hero-content">
 
-<h1>
-Discover Your Next<br>
-Great eBook
-</h1>
+        <div>
 
-<p>
-Learn AI, Computer, English and Digital Skills
-with simple and useful eBooks.
-</p>
+            <h1>
+                Learn More.<br>
+                <span>Grow Faster.</span>
+            </h1>
 
-<a href="#books" class="hero-btn">
-Explore eBooks →
-</a>
+            <p>
+                DigitalReads पर practical और useful eBooks खोजें।
+                AI, Computer, English, Digital Skills, Freelancing और
+                Online Work जैसे topics की आसान books पढ़ें।
+            </p>
 
-</div>
+            <div class="hero-buttons">
 
-<div class="hero-icon">
-📚
-</div>
+                <a href="#books" class="btn btn-primary">
+                    Explore eBooks
+                </a>
+
+                <a href="#topics" class="btn btn-secondary">
+                    Browse Topics
+                </a>
+
+            </div>
+
+        </div>
+
+        <div class="hero-card">
+
+            <div class="big-icon">
+                📚
+            </div>
+
+            <h2>
+                Useful eBooks
+            </h2>
+
+            <p>
+                Simple language • Practical knowledge • Beginner friendly
+            </p>
+
+        </div>
+
+    </div>
 
 </section>
 
 
-<!-- BOOKS -->
+<!-- =========================
+     BOOKS
+========================== -->
+
 <section class="section" id="books">
 
-<h2>
-Featured eBooks
-</h2>
+    <div class="section-heading">
 
-<p class="section-subtitle">
-Choose a book and start learning today.
-</p>
+        <div>
+            <h2>Featured eBooks</h2>
 
+            <p>
+                अपनी जरूरत के अनुसार eBook चुनें।
+            </p>
+        </div>
 
-<div
-class="book-grid"
-id="bookGrid">
-</div>
+    </div>
 
-</section>
-
-
-<!-- DETAILS -->
-<section
-class="section"
-id="detailsSection">
-
-<div id="detailsBox">
-</div>
+    <div id="booksGrid" class="books-grid"></div>
 
 </section>
 
 
-<!-- TOPICS -->
+<!-- =========================
+     TOPICS
+========================== -->
+
+<section class="section" id="topics">
+
+    <div class="section-heading">
+
+        <div>
+            <h2>Explore Topics</h2>
+
+            <p>
+                अलग-अलग topics की books देखें।
+            </p>
+        </div>
+
+    </div>
+
+    <div class="topics">
+
+        <div class="topic"
+             onclick="selectTopic('AI & Technology')">
+
+            <div class="topic-icon">🤖</div>
+
+            <h3>AI & Technology</h3>
+
+            <p>AI और नई technology</p>
+
+        </div>
+
+
+        <div class="topic"
+             onclick="selectTopic('Computer')">
+
+            <div class="topic-icon">💻</div>
+
+            <h3>Computer</h3>
+
+            <p>Computer skills</p>
+
+        </div>
+
+
+        <div class="topic"
+             onclick="selectTopic('English')">
+
+            <div class="topic-icon">🗣️</div>
+
+            <h3>English</h3>
+
+            <p>English speaking</p>
+
+        </div>
+
+
+        <div class="topic"
+             onclick="selectTopic('Online Work')">
+
+            <div class="topic-icon">💰</div>
+
+            <h3>Online Work</h3>
+
+            <p>Work from home skills</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================== -->
+
+<section class="features">
+
+    <div class="features-grid">
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                📖
+            </div>
+
+            <h3>Easy to Learn</h3>
+
+            <p>
+                Beginners के लिए simple language में content।
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                💡
+            </div>
+
+            <h3>Practical Knowledge</h3>
+
+            <p>
+                Useful और practical topics पर focused books।
+            </p>
+
+        </div>
+
+
+        <div class="feature">
+
+            <div class="feature-icon">
+                🔒
+            </div>
+
+            <h3>Secure Shopping</h3>
+
+            <p>
+                Payment system को secure तरीके से integrate किया जाएगा।
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ABOUT
+========================== -->
+
 <section class="section">
 
-<h2>
-Popular Topics
-</h2>
+    <div class="about-box">
 
-<p class="section-subtitle">
-Explore books by topic.
-</p>
+        <h2>
+            About DigitalReads
+        </h2>
 
-<div class="topic-grid">
+        <p>
+            DigitalReads एक online eBook platform है जहाँ learners,
+            students और beginners के लिए practical digital books उपलब्ध
+            कराई जाती हैं। हमारा उद्देश्य useful knowledge को simple
+            language में उपलब्ध कराना है।
+        </p>
 
-<div class="topic">
-<div class="topic-icon">🤖</div>
-<h3>AI & Technology</h3>
-</div>
-
-<div class="topic">
-<div class="topic-icon">💻</div>
-<h3>Computer</h3>
-</div>
-
-<div class="topic">
-<div class="topic-icon">🗣️</div>
-<h3>English</h3>
-</div>
-
-<div class="topic">
-<div class="topic-icon">📱</div>
-<h3>Digital Skills</h3>
-</div>
-
-</div>
+    </div>
 
 </section>
 
 
-<!-- FEATURES -->
-<div class="features">
+<!-- =========================
+     DETAILS MODAL
+========================== -->
 
-<div class="feature">
+<div id="detailsModal" class="modal">
 
-<div class="feature-icon">
-⚡
-</div>
+    <div class="modal-box">
 
-<h3>
-Easy Access
-</h3>
+        <button
+            class="close-modal"
+            onclick="closeDetails()">
+            ×
+        </button>
 
-<p>
-Find useful eBooks easily from DigitalReads.
-</p>
+        <div id="detailsContent"></div>
 
-</div>
-
-
-<div class="feature">
-
-<div class="feature-icon">
-🔒
-</div>
-
-<h3>
-Secure Payment
-</h3>
-
-<p>
-Payments are processed through secure payment services.
-</p>
+    </div>
 
 </div>
 
 
-<div class="feature">
+<!-- =========================
+     FOOTER
+========================== -->
 
-<div class="feature-icon">
-📖
-</div>
-
-<h3>
-Easy Learning
-</h3>
-
-<p>
-Simple content for beginners and learners.
-</p>
-
-</div>
-
-</div>
-
-
-<!-- ABOUT -->
-<section class="about">
-
-<div class="about-box">
-
-<h2>
-About DigitalReads
-</h2>
-
-<p>
-DigitalReads is an online eBook store where
-learners can discover useful books about AI,
-computers, English, technology and practical skills.
-</p>
-
-</div>
-
-</section>
-
-
-<!-- FOOTER -->
 <footer>
 
-<div class="footer">
+    <div class="footer-inner">
 
-<div>
+        <div>
 
-<h3>
-DigitalReads
-</h3>
+            <div class="footer-logo">
+                DigitalReads
+            </div>
 
-<p>
-Your destination for useful digital eBooks.
-</p>
+            <p>
+                Learn more. Grow faster.
+                Useful eBooks for everyone.
+            </p>
 
-</div>
-
-
-<div>
-
-<h3>
-Quick Links
-</h3>
-
-<a href="index.html">
-Home
-</a>
-
-<a href="#books">
-eBooks
-</a>
-
-<a href="privacy.html">
-Privacy Policy
-</a>
-
-</div>
+        </div>
 
 
-<div>
+        <div>
 
-<h3>
-Contact
-</h3>
+            <h3>Quick Links</h3>
 
-<p>
-Email: your@email.com
-</p>
+            <a href="#books">
+                eBooks
+            </a>
 
-</div>
+            <a href="#topics">
+                Topics
+            </a>
 
-</div>
+            <a href="#about">
+                About
+            </a>
+
+        </div>
 
 
-<div class="copyright">
+        <div>
 
-© 2026 DigitalReads. All Rights Reserved.
+            <h3>Information</h3>
 
-</div>
+            <a href="privacy.html">
+                Privacy Policy
+            </a>
+
+            <a href="#">
+                Terms & Conditions
+            </a>
+
+            <a href="#">
+                Refund Policy
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="copyright">
+
+        © <span id="year"></span> DigitalReads.
+        All Rights Reserved.
+
+    </div>
 
 </footer>
 
 
-<!-- BOOK DATABASE -->
+<!-- =========================
+     BOOK DATABASE
+========================== -->
+
 <script src="books.js"></script>
 
 
 <script>
 
-/* ==========================================
-   BOOK DISPLAY
-========================================== */
+    let currentCategory = "All";
 
-const bookGrid =
-document.getElementById("bookGrid");
 
+    /* =========================
+       DISPLAY BOOKS
+    ========================== */
 
-function displayBooks(list){
+    function displayBooks(list) {
 
-bookGrid.innerHTML = "";
+        const grid = document.getElementById("booksGrid");
 
+        grid.innerHTML = "";
 
-if(list.length === 0){
 
-bookGrid.innerHTML = `
-<div class="no-result">
-😔 कोई eBook नहीं मिली।
-</div>
-`;
+        if (!list || list.length === 0) {
 
-return;
+            grid.innerHTML = `
+                <div class="no-books">
+                    <h3>📚 No eBooks Found</h3>
+                    <p>Search या category बदलकर फिर कोशिश करें।</p>
+                </div>
+            `;
 
-}
+            return;
+        }
 
 
-list.forEach(function(book){
+        list.forEach(book => {
 
-const card =
-document.createElement("div");
+            const card = document.createElement("div");
 
-card.className =
-"book-card";
+            card.className = "book-card";
 
 
-card.innerHTML = `
+            card.innerHTML = `
 
-<img
-class="book-cover"
-src="${book.cover}"
-alt="${book.title}">
+                <div class="book-cover">
 
-<div class="book-info">
+                    <img
+                        src="${book.cover}"
+                        alt="${escapeHTML(book.title)}"
+                        loading="lazy"
+                        onerror="this.src='https://via.placeholder.com/400x550/17122b/ffffff?text=DigitalReads';"
+                    >
 
-<div class="book-category">
-${book.category}
-</div>
+                </div>
 
-<h3 class="book-title">
-${book.title}
-</h3>
 
-<p class="book-subtitle">
-${book.subtitle}
-</p>
+                <div class="book-info">
 
-<div class="book-price">
+                    <div class="book-category">
+                        ${escapeHTML(book.category)}
+                    </div>
 
-<span class="price">
-₹${book.price}
-</span>
+                    <div class="book-title">
+                        ${escapeHTML(book.title)}
+                    </div>
 
-${
-book.oldPrice
-?
-`<span class="old-price">
-₹${book.oldPrice}
-</span>`
-:
-""
-}
+                    <div class="book-subtitle">
+                        ${escapeHTML(book.subtitle)}
+                    </div>
 
-</div>
 
-<button
-class="details-btn"
-onclick="showDetails('${book.id}')">
+                    <div class="price-row">
 
-📖 View Details
+                        <span class="price">
+                            ₹${book.price}
+                        </span>
 
-</button>
+                        <span class="old-price">
+                            ₹${book.oldPrice}
+                        </span>
 
-</div>
+                    </div>
 
-`;
 
-bookGrid.appendChild(card);
+                    <div class="book-actions">
 
-});
+                        <button
+                            class="details-btn"
+                            onclick="showDetails('${book.id}')">
+                            Details
+                        </button>
 
-}
+                        <button
+                            class="buy-btn"
+                            onclick="buyBook('${book.id}')">
+                            Buy Now
+                        </button>
 
+                    </div>
 
-/* ==========================================
-   SHOW DETAILS
-========================================== */
+                </div>
 
-function showDetails(id){
+            `;
 
-const book =
-getBookById(id);
 
+            grid.appendChild(card);
 
-if(!book){
+        });
 
-return;
+    }
 
-}
 
+    /* =========================
+       SEARCH
+    ========================== */
 
-document.getElementById(
-"detailsSection"
-).style.display = "block";
+    function searchBooks() {
 
+        const query =
+            document.getElementById("searchInput")
+            .value
+            .toLowerCase()
+            .trim();
 
-let chapters = "";
 
+        let result = books;
 
-book.chapters.forEach(
-function(chapter,index){
 
-chapters += `
+        if (currentCategory !== "All") {
 
-<div class="chapter">
+            result = result.filter(book =>
+                book.category === currentCategory
+            );
 
-📖 Chapter ${index + 1}:
-${chapter}
+        }
 
-</div>
 
-`;
+        if (query !== "") {
 
-});
+            result = result.filter(book =>
 
+                book.title.toLowerCase().includes(query) ||
 
-let buyButton;
+                book.subtitle.toLowerCase().includes(query) ||
 
+                book.category.toLowerCase().includes(query)
 
-if(book.paymentLink){
+            );
 
-buyButton = `
+        }
 
-<a
-href="${book.paymentLink}"
-target="_blank"
-class="buy-btn">
 
-🛒 Buy Now — ₹${book.price}
+        displayBooks(result);
 
-</a>
+    }
 
-`;
 
-}else{
+    /* =========================
+       CATEGORY FILTER
+    ========================== */
 
-buyButton = `
+    function filterCategory(category, button) {
 
-<span
-class="buy-btn"
-style="background:#999">
+        currentCategory = category;
 
-Coming Soon
 
-</span>
+        document
+            .querySelectorAll(".categories button")
+            .forEach(btn => {
+                btn.classList.remove("active");
+            });
 
-`;
 
-}
+        if (button) {
+            button.classList.add("active");
+        }
 
 
-document.getElementById(
-"detailsBox"
-).innerHTML = `
+        searchBooks();
 
-<div class="details-box">
 
-<div>
+        document
+            .getElementById("books")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
 
-<img
-src="${book.cover}"
-class="details-cover"
-alt="${book.title}">
+    }
 
-</div>
 
+    /* =========================
+       TOPIC SELECT
+    ========================== */
 
-<div>
+    function selectTopic(category) {
 
-<div class="details-category">
-${book.category}
-</div>
+        currentCategory = category;
 
-<h1 class="details-title">
-${book.title}
-</h1>
 
-<p class="details-subtitle">
-${book.subtitle}
-</p>
+        document
+            .querySelectorAll(".categories button")
+            .forEach(btn => {
 
-<div class="details-price">
+                btn.classList.remove("active");
 
-₹${book.price}
+                if (btn.textContent.trim() === category) {
+                    btn.classList.add("active");
+                }
 
-${
-book.oldPrice
-?
-`<span class="old-price">
-₹${book.oldPrice}
-</span>`
-:
-""
-}
+            });
 
-</div>
 
+        searchBooks();
 
-${buyButton}
 
+        document
+            .getElementById("books")
+            .scrollIntoView({
+                behavior: "smooth"
+            });
 
-<a
-href="#books"
-class="back-btn"
-onclick="closeDetails()">
+    }
 
-← Back
 
-</a>
+    /* =========================
+       BOOK DETAILS
+    ========================== */
 
+    function showDetails(id) {
 
-<div class="about-book">
+        const book = getBookById(id);
 
-<h3>
-About This eBook
-</h3>
+        if (!book) return;
 
-<p>
-${book.description}
-</p>
 
-</div>
+        const modal =
+            document.getElementById("detailsModal");
 
-</div>
+        const content =
+            document.getElementById("detailsContent");
 
-</div>
 
+        content.innerHTML = `
 
-<div class="chapters">
+            <div class="details-content">
 
-<h2>
-📚 What's Inside
-</h2>
+                <div class="details-cover">
 
-<div class="chapter-grid">
+                    <img
+                        src="${book.cover}"
+                        alt="${escapeHTML(book.title)}"
+                        onerror="this.src='https://via.placeholder.com/400x550/17122b/ffffff?text=DigitalReads';"
+                    >
 
-${chapters}
+                </div>
 
-</div>
 
-</div>
+                <div class="details-info">
 
-`;
+                    <div class="book-category">
+                        ${escapeHTML(book.category)}
+                    </div>
 
 
-window.scrollTo({
+                    <h2>
+                        ${escapeHTML(book.title)}
+                    </h2>
 
-top:
-document.getElementById(
-"detailsSection"
-).offsetTop - 80,
 
-behavior:"smooth"
+                    <div class="subtitle">
+                        ${escapeHTML(book.subtitle)}
+                    </div>
 
-});
 
-}
+                    <p class="details-description">
+                        ${escapeHTML(book.description)}
+                    </p>
 
 
-/* ==========================================
-   CLOSE DETAILS
-========================================== */
+                    <div class="price-row">
 
-function closeDetails(){
+                        <span class="price">
+                            ₹${book.price}
+                        </span>
 
-document.getElementById(
-"detailsSection"
-).style.display = "none";
+                        <span class="old-price">
+                            ₹${book.oldPrice}
+                        </span>
 
-}
+                    </div>
 
 
-/* ==========================================
-   SEARCH
-========================================== */
+                    <h3>
+                        📚 Chapters
+                    </h3>
 
-function searchBooks(){
 
-const text =
-document
-.getElementById("searchInput")
-.value
-.toLowerCase()
-.trim();
+                    <ol class="chapters">
 
+                        ${book.chapters.map(chapter => `
+                            <li>
+                                ${escapeHTML(chapter)}
+                            </li>
+                        `).join("")}
 
-const filtered =
-books.filter(function(book){
+                    </ol>
 
-return (
 
-book.title
-.toLowerCase()
-.includes(text)
+                    <button
+                        class="buy-btn"
+                        style="width:100%; padding:14px;"
+                        onclick="buyBook('${book.id}')">
 
-||
+                        Buy Now — ₹${book.price}
 
-book.subtitle
-.toLowerCase()
-.includes(text)
+                    </button>
 
-||
+                </div>
 
-book.category
-.toLowerCase()
-.includes(text)
+            </div>
 
-);
+        `;
 
-});
 
+        modal.classList.add("show");
 
-displayBooks(filtered);
+        document.body.style.overflow = "hidden";
 
-}
+    }
 
 
-/* ==========================================
-   CATEGORY
-========================================== */
+    /* =========================
+       CLOSE DETAILS
+    ========================== */
 
-function filterBooks(category){
+    function closeDetails() {
 
-closeDetails();
+        document
+            .getElementById("detailsModal")
+            .classList.remove("show");
 
+        document.body.style.overflow = "";
 
-if(category === "All"){
+    }
 
-displayBooks(books);
 
-return;
+    /* =========================
+       BUY BOOK
+    ========================== */
 
-}
+    function buyBook(id) {
 
+        const book = getBookById(id);
 
-const filtered =
-books.filter(function(book){
+        if (!book) return;
 
-return book.category === category;
 
-});
+        if (book.paymentLink && book.paymentLink.trim() !== "") {
 
+            window.open(
+                book.paymentLink,
+                "_blank"
+            );
 
-displayBooks(filtered);
+        } else {
 
-}
+            alert(
+                "इस eBook का payment system अभी setup नहीं हुआ है। Payment option जल्द उपलब्ध होगा।"
+            );
 
+        }
 
-/* ==========================================
-   START
-========================================== */
+    }
 
-displayBooks(books);
+
+    /* =========================
+       CLOSE MODAL ON OUTSIDE CLICK
+    ========================== */
+
+    document
+        .getElementById("detailsModal")
+        .addEventListener("click", function(event) {
+
+            if (event.target === this) {
+                closeDetails();
+            }
+
+        });
+
+
+    /* =========================
+       ESCAPE KEY
+    ========================== */
+
+    document.addEventListener("keydown", function(event) {
+
+        if (event.key === "Escape") {
+            closeDetails();
+        }
+
+    });
+
+
+    /* =========================
+       SECURITY / HTML ESCAPE
+    ========================== */
+
+    function escapeHTML(value) {
+
+        return String(value)
+            .replace(/&/g, "&amp;")
+            .replace(/</g, "&lt;")
+            .replace(/>/g, "&gt;")
+            .replace(/"/g, "&quot;")
+            .replace(/'/g, "&#039;");
+
+    }
+
+
+    /* =========================
+       YEAR
+    ========================== */
+
+    document.getElementById("year").textContent =
+        new Date().getFullYear();
+
+
+    /* =========================
+       INITIAL LOAD
+    ========================== */
+
+    displayBooks(books);
 
 </script>
 
 </body>
 </html>
+```
