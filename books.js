@@ -9,8 +9,8 @@ const books = [
         title: "AI Tools for Beginners",
         subtitle: "AI को आसान भाषा में सीखें और इस्तेमाल करें",
         category: "AI & Technology",
-        price: 99,
-        oldPrice: 149,
+        price: 499,
+        oldPrice: 599,
         cover: "covers/ai-tools.jpg",
         description:
             "Beginners के लिए AI सीखने की आसान eBook। इसमें ChatGPT, AI Images, AI Videos, AI Voice, Writing और Online Work जैसे topics बताए गए हैं।",
@@ -26,7 +26,7 @@ const books = [
             "10 Useful AI Tools",
             "30-Day AI Learning Plan"
         ],
-       paymentLink: "https://rzp.io/rzp/dMGNzZs"
+        paymentLink: "https://rzp.io/rzp/JDuDuEf"
     },
 
     {
