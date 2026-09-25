@@ -1,0 +1,692 @@
+```html
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>AI Tools for Beginners — DigitalReads</title>
+
+<style>
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    font-family:Arial, sans-serif;
+    background:#f3f0ea;
+    color:#222;
+}
+
+/* HEADER */
+.header{
+    background:#0c1c34;
+    color:white;
+    padding:16px 22px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 3px 15px rgba(0,0,0,.25);
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+    color:#d9ab4c;
+}
+
+.book-title{
+    font-size:15px;
+}
+
+/* READER */
+.reader{
+    max-width:900px;
+    margin:25px auto;
+    padding:0 15px;
+}
+
+.page{
+    background:white;
+    min-height:900px;
+    padding:60px 65px;
+    border-radius:12px;
+    box-shadow:0 5px 25px rgba(0,0,0,.12);
+    line-height:1.8;
+    display:none;
+}
+
+.page.active{
+    display:block;
+}
+
+.chapter{
+    color:#0c1c34;
+    font-size:16px;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+h1{
+    color:#0c1c34;
+    font-size:34px;
+    margin-top:0;
+}
+
+h2{
+    color:#9b7428;
+}
+
+p{
+    font-size:18px;
+}
+
+ul{
+    font-size:18px;
+    line-height:1.9;
+}
+
+.quote{
+    background:#f8f1df;
+    border-left:5px solid #d9ab4c;
+    padding:15px 20px;
+    margin:25px 0;
+}
+
+/* CONTROLS */
+.controls{
+    max-width:900px;
+    margin:20px auto 40px;
+    padding:0 15px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+button{
+    border:0;
+    padding:12px 20px;
+    border-radius:8px;
+    background:#0c1c34;
+    color:white;
+    cursor:pointer;
+    font-size:15px;
+}
+
+button:hover{
+    background:#172d4d;
+}
+
+button:disabled{
+    opacity:.45;
+    cursor:not-allowed;
+}
+
+.page-number{
+    font-weight:bold;
+    color:#0c1c34;
+    min-width:100px;
+    text-align:center;
+}
+
+/* FOOTER */
+.footer{
+    text-align:center;
+    padding:25px;
+    background:#0c1c34;
+    color:#ddd;
+    font-size:13px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    .header{
+        padding:13px 15px;
+    }
+
+    .logo{
+        font-size:18px;
+    }
+
+    .book-title{
+        font-size:12px;
+    }
+
+    .reader{
+        margin:12px auto;
+        padding:0 8px;
+    }
+
+    .page{
+        min-height:700px;
+        padding:30px 22px;
+        border-radius:8px;
+    }
+
+    h1{
+        font-size:27px;
+    }
+
+    p,ul{
+        font-size:16px;
+    }
+
+    button{
+        padding:10px 14px;
+    }
+}
+
+/* PRINT/DOWNLOAD BLOCKING */
+@media print{
+    body{
+        display:none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header class="header">
+    <div class="logo">DigitalReads</div>
+    <div class="book-title">AI Tools for Beginners</div>
+</header>
+
+
+<main class="reader">
+
+<!-- PAGE 1 -->
+<section class="page active">
+
+<div class="chapter">DigitalReads eBook</div>
+
+<h1>AI Tools for Beginners</h1>
+
+<h2>AI को आसान भाषा में सीखें और इस्तेमाल करें</h2>
+
+<p>
+यह eBook beginners के लिए बनाई गई है।
+इसमें Artificial Intelligence को आसान भाषा में समझाया गया है
+और practical तरीके से AI tools इस्तेमाल करना बताया गया है।
+</p>
+
+<div class="quote">
+<b>Price:</b> ₹99<br>
+<b>Language:</b> Hindi + English<br>
+<b>Chapters:</b> 10
+</div>
+
+<p>
+इस eBook में आपको AI, ChatGPT, AI Images, AI Videos,
+AI Voice, Study, Online Work, AI Safety और 30-Day Learning Plan
+के बारे में बताया गया है।
+</p>
+
+</section>
+
+
+<!-- PAGE 2 -->
+<section class="page">
+
+<div class="chapter">Chapter 1</div>
+
+<h1>AI क्या है?</h1>
+
+<h2>What is Artificial Intelligence?</h2>
+
+<p>
+Artificial Intelligence (AI) ऐसी technology है जो computers और
+software को ऐसे काम करने में मदद करती है जिनमें आम तौर पर
+human intelligence की जरूरत होती है।
+</p>
+
+<p>
+उदाहरण के लिए AI भाषा समझ सकता है, patterns पहचान सकता है,
+text लिख सकता है और images या videos बनाने में मदद कर सकता है।
+</p>
+
+<h2>AI के Examples</h2>
+
+<ul>
+<li>Google Search suggestions</li>
+<li>YouTube recommendations</li>
+<li>Voice assistants</li>
+<li>Chatbots</li>
+<li>AI writing tools</li>
+<li>AI image generation</li>
+<li>AI video generation</li>
+</ul>
+
+<div class="quote">
+<b>Key Takeaway:</b><br>
+AI को magic नहीं, एक useful tool की तरह समझें।
+</div>
+
+</section>
+
+
+<!-- PAGE 3 -->
+<section class="page">
+
+<div class="chapter">Chapter 2</div>
+
+<h1>ChatGPT का इस्तेमाल</h1>
+
+<h2>How to Use ChatGPT</h2>
+
+<p>
+ChatGPT एक conversational AI assistant है।
+इससे questions पूछे जा सकते हैं, ideas लिए जा सकते हैं,
+text लिखा जा सकता है और learning में मदद ली जा सकती है।
+</p>
+
+<h2>अच्छा Prompt कैसे लिखें?</h2>
+
+<ul>
+<li>Role बताएं</li>
+<li>Task बताएं</li>
+<li>Context दें</li>
+<li>Answer का Format बताएं</li>
+</ul>
+
+<div class="quote">
+<b>Example Prompt:</b><br>
+आप एक beginner computer teacher हैं।
+मुझे Windows में folder बनाना आसान Hindi में
+5 steps में समझाइए।
+</div>
+
+<h2>Practical Uses</h2>
+
+<ul>
+<li>Study notes</li>
+<li>Email writing</li>
+<li>Translation</li>
+<li>Brainstorming</li>
+<li>Coding help</li>
+<li>Interview practice</li>
+</ul>
+
+</section>
+
+
+<!-- PAGE 4 -->
+<section class="page">
+
+<div class="chapter">Chapter 3</div>
+
+<h1>AI से Images बनाना</h1>
+
+<h2>AI Image Generation</h2>
+
+<p>
+AI image generators text prompt से pictures बनाने में मदद करते हैं।
+इनका उपयोग posters, thumbnails, illustrations और creative artwork
+के लिए किया जा सकता है।
+</p>
+
+<h2>एक अच्छा Image Prompt</h2>
+
+<ul>
+<li>Subject</li>
+<li>Style</li>
+<li>Background</li>
+<li>Lighting</li>
+<li>Composition</li>
+<li>Aspect Ratio</li>
+</ul>
+
+<div class="quote">
+<b>Example:</b><br>
+Modern laptop desk setup, AI learning theme,
+clean professional workspace, soft studio lighting,
+realistic photography.
+</div>
+
+<p>
+Commercial project में इस्तेमाल करने से पहले AI tool की
+licensing और usage terms जरूर check करें।
+</p>
+
+</section>
+
+
+<!-- PAGE 5 -->
+<section class="page">
+
+<div class="chapter">Chapter 4</div>
+
+<h1>AI से Videos बनाना</h1>
+
+<h2>AI Video Creation</h2>
+
+<p>
+AI video tools text, images और instructions की मदद से
+video creation को आसान बना सकते हैं।
+</p>
+
+<h2>Basic Workflow</h2>
+
+<ol>
+<li>Topic चुनें</li>
+<li>Script बनाएं</li>
+<li>Scenes को अलग करें</li>
+<li>Visuals बनाएं</li>
+<li>Voiceover जोड़ें</li>
+<li>Subtitles लगाएं</li>
+<li>Final video export करें</li>
+</ol>
+
+<div class="quote">
+<b>Tip:</b><br>
+Video के पहले 2–3 seconds में strong hook रखें।
+</div>
+
+</section>
+
+
+<!-- PAGE 6 -->
+<section class="page">
+
+<div class="chapter">Chapter 5</div>
+
+<h1>AI Voice & Audio</h1>
+
+<p>
+AI voice tools text को speech में बदलने में मदद करते हैं।
+इनका उपयोग narration, educational videos और explainers में किया
+जा सकता है।
+</p>
+
+<h2>Workflow</h2>
+
+<ul>
+<li>Script तैयार करें</li>
+<li>Voice चुनें</li>
+<li>Preview सुनें</li>
+<li>Pronunciation check करें</li>
+<li>Pauses ठीक करें</li>
+<li>Audio export करें</li>
+</ul>
+
+<div class="quote">
+किसी व्यक्ति की आवाज़ की unauthorized cloning न करें।
+Voice service की terms और consent requirements देखें।
+</div>
+
+</section>
+
+
+<!-- PAGE 7 -->
+<section class="page">
+
+<div class="chapter">Chapter 6</div>
+
+<h1>AI से Writing & Study</h1>
+
+<p>
+AI learning और writing में assistant की तरह काम कर सकता है।
+</p>
+
+<h2>Study में AI</h2>
+
+<ul>
+<li>Topic explanation</li>
+<li>Chapter summary</li>
+<li>Flashcards</li>
+<li>Practice questions</li>
+<li>Quiz</li>
+<li>English practice</li>
+</ul>
+
+<h2>Writing में AI</h2>
+
+<ul>
+<li>Email</li>
+<li>Blog outline</li>
+<li>Product description</li>
+<li>Social-media ideas</li>
+<li>Grammar improvement</li>
+<li>Translation</li>
+</ul>
+
+<div class="quote">
+AI का answer समझे बिना किसी academic work में सीधे submit न करें।
+</div>
+
+</section>
+
+
+<!-- PAGE 8 -->
+<section class="page">
+
+<div class="chapter">Chapter 7</div>
+
+<h1>AI से Online Work</h1>
+
+<p>
+AI की मदद से कई digital services आसान हुई हैं।
+Beginners छोटी और clear services से शुरुआत कर सकते हैं।
+</p>
+
+<ul>
+<li>Social-media captions</li>
+<li>Poster / thumbnail creation</li>
+<li>Short-video scripts</li>
+<li>Product descriptions</li>
+<li>Presentation content</li>
+<li>Transcription cleanup</li>
+<li>Research summaries</li>
+</ul>
+
+<h2>Scam से बचें</h2>
+
+<ul>
+<li>बड़ी upfront fee से सावधान रहें</li>
+<li>OTP और password share न करें</li>
+<li>Client identity verify करें</li>
+<li>Payment terms पहले clear करें</li>
+</ul>
+
+</section>
+
+
+<!-- PAGE 9 -->
+<section class="page">
+
+<div class="chapter">Chapter 8</div>
+
+<h1>AI Safety</h1>
+
+<h2>सुरक्षित इस्तेमाल</h2>
+
+<p>
+AI इस्तेमाल करते समय privacy और accuracy का ध्यान रखना जरूरी है।
+</p>
+
+<h2>क्या Share नहीं करना चाहिए?</h2>
+
+<ul>
+<li>Password</li>
+<li>OTP</li>
+<li>Bank PIN</li>
+<li>Private documents</li>
+<li>Confidential information</li>
+</ul>
+
+<h2>AI Information Verify करें</h2>
+
+<p>
+Important information के लिए official sources देखें।
+Date और context check करें।
+</p>
+
+<div class="quote">
+AI से मदद लें, लेकिन sensitive decisions में
+human judgment और reliable sources को priority दें।
+</div>
+
+</section>
+
+
+<!-- PAGE 10 -->
+<section class="page">
+
+<div class="chapter">Chapter 9</div>
+
+<h1>10 Useful AI Tools</h1>
+
+<ol>
+<li>ChatGPT — Writing & Learning</li>
+<li>Google Gemini — AI Assistance</li>
+<li>Microsoft Copilot — Productivity</li>
+<li>Canva AI — Design</li>
+<li>Adobe Firefly — Creative Work</li>
+<li>CapCut AI — Video</li>
+<li>ElevenLabs — AI Voice</li>
+<li>Notion AI — Productivity</li>
+<li>Grammarly — Writing</li>
+<li>Perplexity — Research</li>
+</ol>
+
+<div class="quote">
+AI tools की features और pricing समय के साथ बदल सकती हैं।
+Current information के लिए official websites check करें।
+</div>
+
+</section>
+
+
+<!-- PAGE 11 -->
+<section class="page">
+
+<div class="chapter">Chapter 10</div>
+
+<h1>30-Day AI Learning Plan</h1>
+
+<ul>
+<li><b>Days 1–3:</b> AI basics और prompts</li>
+<li><b>Days 4–6:</b> ChatGPT practice</li>
+<li><b>Days 7–9:</b> Image prompts</li>
+<li><b>Days 10–12:</b> Video scripts</li>
+<li><b>Days 13–15:</b> AI voice</li>
+<li><b>Days 16–18:</b> Study tools</li>
+<li><b>Days 19–21:</b> Online-work skill</li>
+<li><b>Days 22–24:</b> AI safety</li>
+<li><b>Days 25–27:</b> Portfolio</li>
+<li><b>Days 28–29:</b> Real-world project</li>
+<li><b>Day 30:</b> Review और next goal</li>
+</ul>
+
+<div class="quote">
+<b>Final Message</b><br>
+AI सीखने का सबसे अच्छा तरीका रोज थोड़ा practice करना है।
+छोटे projects से शुरुआत करें, results verify करें और
+धीरे-धीरे अपनी skill मजबूत करें।
+</div>
+
+<h2>Thank You</h2>
+
+<p>
+DigitalReads<br>
+AI Tools for Beginners
+</p>
+
+</section>
+
+</main>
+
+
+<div class="controls">
+
+<button id="prev" onclick="previousPage()">← Previous</button>
+
+<div class="page-number">
+<span id="current">1</span> / 11
+</div>
+
+<button id="next" onclick="nextPage()">Next →</button>
+
+</div>
+
+
+<footer class="footer">
+© 2026 DigitalReads • AI Tools for Beginners
+</footer>
+
+
+<script>
+
+let currentPage = 1;
+const totalPages = 11;
+
+function showPage(page){
+
+    document.querySelectorAll(".page").forEach((p,index)=>{
+        p.classList.remove("active");
+
+        if(index === page-1){
+            p.classList.add("active");
+        }
+    });
+
+    document.getElementById("current").textContent = page;
+
+    document.getElementById("prev").disabled = page === 1;
+    document.getElementById("next").disabled = page === totalPages;
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+}
+
+function nextPage(){
+
+    if(currentPage < totalPages){
+        currentPage++;
+        showPage(currentPage);
+    }
+
+}
+
+function previousPage(){
+
+    if(currentPage > 1){
+        currentPage--;
+        showPage(currentPage);
+    }
+
+}
+
+document.addEventListener("keydown",function(e){
+
+    if(e.key === "ArrowRight"){
+        nextPage();
+    }
+
+    if(e.key === "ArrowLeft"){
+        previousPage();
+    }
+
+});
+
+/* Basic right-click restriction */
+document.addEventListener("contextmenu",function(e){
+    e.preventDefault();
+});
+
+showPage(1);
+
+</script>
+
+</body>
+</html>
+```
