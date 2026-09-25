@@ -34,8 +34,8 @@ const books = [
         title: "Computer Basics",
         subtitle: "Computer सीखने की आसान शुरुआत",
         category: "Computer",
-        price: 79,
-        oldPrice: 129,
+        price: 449,
+        oldPrice: 549,
         cover: "covers/computer-basics.jpg",
         description:
             "Computer सीखने वाले beginners के लिए आसान eBook। इसमें computer parts, Windows, files, folders, internet और basic computer skills समझाई गई हैं।",
@@ -51,7 +51,8 @@ const books = [
             "Online Safety",
             "Computer Practice Plan"
         ],
-        paymentLink: ""
+        paymentLink: "https://rzp.io/rzp/7hcUvLyI"
+     
     },
 
     {
